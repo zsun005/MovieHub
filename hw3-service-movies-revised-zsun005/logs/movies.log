@@ -1,0 +1,141 @@
+[2019/06/06 21:22:08][CONFIG][initLogger]  Logging initialized.
+[2019/06/06 21:22:08][CONFIG][initService]  Starting service...
+[2019/06/06 21:22:08][CONFIG][currentConfigs]  Scheme: http://
+[2019/06/06 21:22:08][CONFIG][currentConfigs]  Hostname: 0.0.0.0
+[2019/06/06 21:22:08][CONFIG][currentConfigs]  Port: 6241
+[2019/06/06 21:22:08][CONFIG][currentConfigs]  Path: /api/movies
+[2019/06/06 21:22:08][CONFIG][currentConfigs]  Logger output directory: ./logs/
+[2019/06/06 21:22:08][CONFIG][currentConfigs]  Logger output file: movies.log
+[2019/06/06 21:22:08][CONFIG][currentConfigs]  Database hostname: colin-baker-v3.ics.uci.edu
+[2019/06/06 21:22:08][CONFIG][currentConfigs]  Database port: 3306
+[2019/06/06 21:22:08][CONFIG][currentConfigs]  Database username: cs122b_db134
+[2019/06/06 21:22:08][CONFIG][currentConfigs]  Database password provided? true
+[2019/06/06 21:22:08][CONFIG][currentConfigs]  Database name: cs122b_db134
+[2019/06/06 21:22:08][CONFIG][currentConfigs]  Database driver: com.mysql.cj.jdbc.Driver
+[2019/06/06 21:22:08][CONFIG][currentConfigs]  Database connection settings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/06/06 21:22:08][CONFIG][connectToDatabase]  Connecting to database...
+[2019/06/06 21:22:08][CONFIG][connectToDatabase]  Database URL: jdbc:mysql://colin-baker-v3.ics.uci.edu:3306/cs122b_db134?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/06/06 21:22:09][CONFIG][connectToDatabase]  Connected to database: jdbc:mysql://colin-baker-v3.ics.uci.edu:3306/cs122b_db134?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/06/06 21:22:09][CONFIG][initHTTPServer]  Initializing HTTP server...
+[2019/06/06 21:22:09][CONFIG][initHTTPServer]  Building URI from movieConfigs...
+[2019/06/06 21:22:09][CONFIG][initHTTPServer]  Final URI: http://0.0.0.0:6241/api/movies
+[2019/06/06 21:22:09][CONFIG][initHTTPServer]  Set Jersey resources.
+[2019/06/06 21:22:09][CONFIG][initHTTPServer]  Set Jackson as serializer.
+[2019/06/06 21:22:09][CONFIG][initHTTPServer]  Starting HTTP server...
+[2019/06/06 21:22:10][CONFIG][initHTTPServer]  HTTP server started.
+[2019/06/06 21:22:10][CONFIG][initService]  Service initialized.
+[2019/06/06 21:26:01][INFO][searchMovies]  Recevied Request
+[2019/06/06 21:26:01][INFO][searchMovies]  Email: sunzexi9920@gmail.com
+[2019/06/06 21:26:01][INFO][searchMovies]  SessionID: cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8
+[2019/06/06 21:26:01][INFO][searchMovies]  Title: love
+[2019/06/06 21:26:01][INFO][searchMovies]  Genre: null
+[2019/06/06 21:26:01][INFO][searchMovies]  Year: 0
+[2019/06/06 21:26:01][INFO][searchMovies]  Director: null
+[2019/06/06 21:26:01][INFO][searchMovies]  Hidden: false
+[2019/06/06 21:26:01][INFO][searchMovies]  Offset: 0
+[2019/06/06 21:26:01][INFO][searchMovies]  Limit: 10
+[2019/06/06 21:26:01][INFO][searchMovies]  Direction: DESC
+[2019/06/06 21:26:01][INFO][searchMovies]  OrderBy: rating
+[2019/06/06 21:26:01][INFO][searchMovies]  Input Json node generated: {"title":"love","genre":null,"year":0,"director":null,"hidden":false,"offset":0,"limit":10,"direction":"DESC","orderby":"rating"}
+[2019/06/06 21:26:01][INFO][searchMovies]  Create Json Text: {
+  "title" : "love",
+  "genre" : null,
+  "year" : 0,
+  "director" : null,
+  "hidden" : false,
+  "offset" : 0,
+  "limit" : 10,
+  "direction" : "DESC",
+  "orderby" : "rating"
+}
+[2019/06/06 21:26:01][INFO][searchMovie]  Searching for students...
+[2019/06/06 21:26:01][INFO][VerifyPrivillege]  Verifying privilege level with IDM...
+[2019/06/06 21:26:01][INFO][VerifyPrivillege]  Movie VerifyPrivillege: sunzexi9920@gmail.comif has privilege 3
+[2019/06/06 21:26:01][INFO][VerifyPrivillege]  Revepived status 200!
+[2019/06/06 21:26:01][INFO][VerifyPrivillege]  jsonText: {"resultCode":141,"message":"User has insufficient privilege level."}
+[2019/06/06 21:26:01][INFO][searchMovie]  Get back from verify privilege, get Result Code: 141
+[2019/06/06 21:26:01][INFO][queryMovies]  Start Query Movies
+[2019/06/06 21:26:01][INFO][queryMovies]  Line 59
+[2019/06/06 21:26:01][INFO][queryMovies]  Line 61
+[2019/06/06 21:26:01][INFO][queryMovies]  Line 64
+[2019/06/06 21:26:01][INFO][queryMovies]  Line 70
+[2019/06/06 21:26:01][INFO][queryMovies]  Line 79
+[2019/06/06 21:26:01][INFO][queryMovies]  includeHidden: false
+[2019/06/06 21:26:01][INFO][queryMovies]  privileged = 0
+[2019/06/06 21:26:01][INFO][queryMovies]  Get result: true
+[2019/06/06 21:26:01][INFO][queryMovies]  Line 83
+[2019/06/06 21:26:01][INFO][queryMovies]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT m.id AS id, m.title AS title, m.director AS director, m.year AS year, r.rating as rating, r.numVotes as numVotes, m.hidden AS hidden FROM movies m RIGHT OUTER JOIN (SELECT movieId, name AS genreName FROM genres_in_movies LEFT OUTER JOIN genres ON genreId = id WHERE genres.name LIKE '%%' ) g ON m.id = g.movieId LEFT OUTER JOIN ratings r ON m.id = r.movieId WHERE 1 = 1 AND ('%love%' = '%%' OR title LIKE '%love%') AND (0 = 0 OR year = 0) AND ('%%' = '%%' OR director LIKE '%%') AND hidden = 0 ORDER BY 'rating' DESC LIMIT 10 OFFSET 0
+[2019/06/06 21:26:01][INFO][queryMovies]  Query Succeed
+[2019/06/06 21:26:01][INFO][searchMovie]  Get responseModel: 210
+[2019/06/06 21:26:06][INFO][searchMovieById]  Recevied Search Movie BY id Request
+[2019/06/06 21:26:06][INFO][searchMovieById]  Email: sunzexi9920@gmail.com
+[2019/06/06 21:26:06][INFO][searchMovieById]  SessionID: cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8
+[2019/06/06 21:26:06][INFO][searchMovieById]  GET ID: tt0347167
+[2019/06/06 21:26:06][INFO][VerifyPrivillege]  Verifying privilege level with IDM...
+[2019/06/06 21:26:06][INFO][VerifyPrivillege]  Movie VerifyPrivillege: sunzexi9920@gmail.comif has privilege 4
+[2019/06/06 21:26:06][INFO][VerifyPrivillege]  Revepived status 200!
+[2019/06/06 21:26:06][INFO][VerifyPrivillege]  jsonText: {"resultCode":141,"message":"User has insufficient privilege level."}
+[2019/06/06 21:26:06][INFO][SearchMovieById]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: CALL search_movie('tt0347167')
+[2019/06/06 21:26:06][INFO][SearchMovieById]  Query Succeed
+[2019/06/06 21:26:06][INFO][SearchMovieById]  Line 48
+[2019/06/06 21:26:06][INFO][SearchMovieById]  Line 53
+[2019/06/06 21:26:06][INFO][searchMovieById]  ResultCode: 210
+[2019/06/06 21:26:06][INFO][searchMovieById]  Message: Found movies with search parameters.
+[2019/06/06 21:40:43][INFO][retrieveGenre]  Try Query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM genres
+[2019/06/06 21:42:15][INFO][searchMovies]  Recevied Request
+[2019/06/06 21:42:15][INFO][searchMovies]  Email: sunzexi9920@gmail.com
+[2019/06/06 21:42:15][INFO][searchMovies]  SessionID: 13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2
+[2019/06/06 21:42:15][INFO][searchMovies]  Title: love
+[2019/06/06 21:42:15][INFO][searchMovies]  Genre: null
+[2019/06/06 21:42:15][INFO][searchMovies]  Year: 0
+[2019/06/06 21:42:15][INFO][searchMovies]  Director: null
+[2019/06/06 21:42:15][INFO][searchMovies]  Hidden: false
+[2019/06/06 21:42:15][INFO][searchMovies]  Offset: 0
+[2019/06/06 21:42:15][INFO][searchMovies]  Limit: 10
+[2019/06/06 21:42:15][INFO][searchMovies]  Direction: DESC
+[2019/06/06 21:42:15][INFO][searchMovies]  OrderBy: rating
+[2019/06/06 21:42:15][INFO][searchMovies]  Input Json node generated: {"title":"love","genre":null,"year":0,"director":null,"hidden":false,"offset":0,"limit":10,"direction":"DESC","orderby":"rating"}
+[2019/06/06 21:42:15][INFO][searchMovies]  Create Json Text: {
+  "title" : "love",
+  "genre" : null,
+  "year" : 0,
+  "director" : null,
+  "hidden" : false,
+  "offset" : 0,
+  "limit" : 10,
+  "direction" : "DESC",
+  "orderby" : "rating"
+}
+[2019/06/06 21:42:15][INFO][searchMovie]  Searching for students...
+[2019/06/06 21:42:15][INFO][VerifyPrivillege]  Verifying privilege level with IDM...
+[2019/06/06 21:42:15][INFO][VerifyPrivillege]  Movie VerifyPrivillege: sunzexi9920@gmail.comif has privilege 3
+[2019/06/06 21:42:15][INFO][VerifyPrivillege]  Revepived status 200!
+[2019/06/06 21:42:15][INFO][VerifyPrivillege]  jsonText: {"resultCode":141,"message":"User has insufficient privilege level."}
+[2019/06/06 21:42:15][INFO][searchMovie]  Get back from verify privilege, get Result Code: 141
+[2019/06/06 21:42:15][INFO][queryMovies]  Start Query Movies
+[2019/06/06 21:42:15][INFO][queryMovies]  Line 59
+[2019/06/06 21:42:15][INFO][queryMovies]  Line 61
+[2019/06/06 21:42:15][INFO][queryMovies]  Line 64
+[2019/06/06 21:42:15][INFO][queryMovies]  Line 70
+[2019/06/06 21:42:15][INFO][queryMovies]  Line 79
+[2019/06/06 21:42:15][INFO][queryMovies]  includeHidden: false
+[2019/06/06 21:42:15][INFO][queryMovies]  privileged = 0
+[2019/06/06 21:42:15][INFO][queryMovies]  Get result: true
+[2019/06/06 21:42:15][INFO][queryMovies]  Line 83
+[2019/06/06 21:42:15][INFO][queryMovies]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT m.id AS id, m.title AS title, m.director AS director, m.year AS year, r.rating as rating, r.numVotes as numVotes, m.hidden AS hidden FROM movies m RIGHT OUTER JOIN (SELECT movieId, name AS genreName FROM genres_in_movies LEFT OUTER JOIN genres ON genreId = id WHERE genres.name LIKE '%%' ) g ON m.id = g.movieId LEFT OUTER JOIN ratings r ON m.id = r.movieId WHERE 1 = 1 AND ('%love%' = '%%' OR title LIKE '%love%') AND (0 = 0 OR year = 0) AND ('%%' = '%%' OR director LIKE '%%') AND hidden = 0 ORDER BY 'rating' DESC LIMIT 10 OFFSET 0
+[2019/06/06 21:42:15][INFO][queryMovies]  Query Succeed
+[2019/06/06 21:42:15][INFO][searchMovie]  Get responseModel: 210
+[2019/06/06 21:42:20][INFO][searchMovieById]  Recevied Search Movie BY id Request
+[2019/06/06 21:42:20][INFO][searchMovieById]  Email: sunzexi9920@gmail.com
+[2019/06/06 21:42:20][INFO][searchMovieById]  SessionID: 13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2
+[2019/06/06 21:42:20][INFO][searchMovieById]  GET ID: tt0457355
+[2019/06/06 21:42:20][INFO][VerifyPrivillege]  Verifying privilege level with IDM...
+[2019/06/06 21:42:20][INFO][VerifyPrivillege]  Movie VerifyPrivillege: sunzexi9920@gmail.comif has privilege 4
+[2019/06/06 21:42:20][INFO][VerifyPrivillege]  Revepived status 200!
+[2019/06/06 21:42:20][INFO][VerifyPrivillege]  jsonText: {"resultCode":141,"message":"User has insufficient privilege level."}
+[2019/06/06 21:42:20][INFO][SearchMovieById]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: CALL search_movie('tt0457355')
+[2019/06/06 21:42:20][INFO][SearchMovieById]  Query Succeed
+[2019/06/06 21:42:20][INFO][SearchMovieById]  Line 48
+[2019/06/06 21:42:20][INFO][SearchMovieById]  Line 53
+[2019/06/06 21:42:20][INFO][searchMovieById]  ResultCode: 210
+[2019/06/06 21:42:20][INFO][searchMovieById]  Message: Found movies with search parameters.

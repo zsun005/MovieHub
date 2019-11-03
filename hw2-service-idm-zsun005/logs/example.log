@@ -1,0 +1,881 @@
+[2019/06/06 21:21:36][CONFIG][initLogger]  Logging initialized.
+[2019/06/06 21:21:36][CONFIG][initService]  Starting service...
+[2019/06/06 21:21:36][CONFIG][currentConfigs]  Scheme: http://
+[2019/06/06 21:21:36][CONFIG][currentConfigs]  Hostname: 0.0.0.0
+[2019/06/06 21:21:36][CONFIG][currentConfigs]  Port: 6243
+[2019/06/06 21:21:36][CONFIG][currentConfigs]  Path/api/idm
+[2019/06/06 21:21:36][CONFIG][currentConfigs]  Logger output directory: ./logs/
+[2019/06/06 21:21:36][CONFIG][currentConfigs]  Logger output file: example.log
+[2019/06/06 21:21:36][CONFIG][currentConfigs]  dbUsername: cs122b_db134
+[2019/06/06 21:21:36][CONFIG][currentConfigs]  dbPassword: b~mzRzwNdWdE
+[2019/06/06 21:21:36][CONFIG][currentConfigs]  dbHostname: matt-smith-v4.ics.uci.edu
+[2019/06/06 21:21:36][CONFIG][currentConfigs]  dbPort: 3306
+[2019/06/06 21:21:36][CONFIG][currentConfigs]  dbDriver: com.mysql.cj.jdbc.Driver
+[2019/06/06 21:21:36][CONFIG][currentConfigs]  dbName: cs122b_db134
+[2019/06/06 21:21:36][CONFIG][connectToDatabase]  Connecting to database...
+[2019/06/06 21:21:36][CONFIG][connectToDatabase]  Database URL: jdbc:mysql://matt-smith-v4.ics.uci.edu:3306/cs122b_db134?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/06/06 21:21:38][CONFIG][connectToDatabase]  Connected to database: com.mysql.cj.jdbc.ConnectionImpl@5d740a0f
+[2019/06/06 21:21:38][CONFIG][initHTTPServer]  Initializing HTTP server...
+[2019/06/06 21:21:38][CONFIG][initHTTPServer]  Building URI from configs...
+[2019/06/06 21:21:38][CONFIG][initHTTPServer]  Final URI: http://0.0.0.0:6243/api/idm
+[2019/06/06 21:21:38][CONFIG][initHTTPServer]  Set Jersey resources.
+[2019/06/06 21:21:38][CONFIG][initHTTPServer]  Set Jackson as serializer.
+[2019/06/06 21:21:38][CONFIG][initHTTPServer]  Starting HTTP server...
+[2019/06/06 21:21:38][CONFIG][initHTTPServer]  HTTP server started.
+[2019/06/06 21:21:38][CONFIG][initService]  Service initialized.
+[2019/06/06 21:24:51][INFO][IMDLogin]  Received User and Password
+[2019/06/06 21:24:51][INFO][IMDLogin]  Request:
+{"email":"sunzexi9920@gmail.com","password":"SZX920405szx!"}
+[2019/06/06 21:24:51][INFO][queryCheckEmail]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM users WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:24:51][INFO][queryCheckEmail]  Query succeed.
+[2019/06/06 21:24:51][INFO][queryCheckEmail]  Get num: 0
+[2019/06/06 21:25:14][INFO][IDMRegister]  Received User and Password.
+[2019/06/06 21:25:14][INFO][IDMRegister]  Request:
+{"email":"sunzexi9920@gmail.com","password":"SZX920405szx!"}
+[2019/06/06 21:25:14][INFO][queryCheckEmail]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM users WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:25:14][INFO][queryCheckEmail]  Query succeed.
+[2019/06/06 21:25:14][INFO][queryCheckEmail]  Get num: 0
+[2019/06/06 21:25:14][INFO][getPassword]  GETPass: [C@6dc72dc3
+[2019/06/06 21:25:15][INFO][insertEmailtoDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO users (email, plevel, salt, pword, status) VALUES ('sunzexi9920@gmail.com', 5, 'c6bf191d', '01290f68a1131c69e996f7c025b0461f27dc6a2535d9c9fe691d5b8880116e3a1bccdf3ace838fd5a16176053e557e90c26e9cfe82ab6aca9e527be70ef04b67', 1)
+[2019/06/06 21:25:28][INFO][IMDLogin]  Received User and Password
+[2019/06/06 21:25:28][INFO][IMDLogin]  Request:
+{"email":"sunzexi9920@gmail.com","password":"SZX920405szx#"}
+[2019/06/06 21:25:28][INFO][queryCheckEmail]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM users WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:25:28][INFO][queryCheckEmail]  Query succeed.
+[2019/06/06 21:25:28][INFO][queryCheckEmail]  Get num: 1
+[2019/06/06 21:25:28][INFO][getPassword]  GETPASSWORD Function: [C@1db15217
+[2019/06/06 21:25:28][INFO][queryCheckEmail]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT salt AS salt FROM users WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:25:28][INFO][queryCheckEmail]  Query succeed.
+[2019/06/06 21:25:28][INFO][queryCheckEmail]  Get salt: c6bf191d
+[2019/06/06 21:25:28][INFO][IMDLogin]  Get Salt: c6bf191d
+[2019/06/06 21:25:28][INFO][emailAndPassCheck]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM users WHERE email = 'sunzexi9920@gmail.com' AND pword = 'b9ceca190efc04c44e19f050bef6147634c2959af8579a13a49684f3757e589b3c7055975578282a46d71b938dbdfb48de17dbfef66d81bf7f6965d72d96116d'
+[2019/06/06 21:25:28][INFO][emailAndPassCheck]  Query succeed.
+[2019/06/06 21:25:28][INFO][emailAndPassCheck]  Get num: 0
+[2019/06/06 21:25:28][INFO][IMDLogin]  Password not match
+[2019/06/06 21:25:37][INFO][IMDLogin]  Received User and Password
+[2019/06/06 21:25:37][INFO][IMDLogin]  Request:
+{"email":"sunzexi9920@gmail.com","password":"SZX920405szx!"}
+[2019/06/06 21:25:37][INFO][queryCheckEmail]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM users WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:25:37][INFO][queryCheckEmail]  Query succeed.
+[2019/06/06 21:25:37][INFO][queryCheckEmail]  Get num: 1
+[2019/06/06 21:25:37][INFO][getPassword]  GETPASSWORD Function: [C@3c8e4430
+[2019/06/06 21:25:37][INFO][queryCheckEmail]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT salt AS salt FROM users WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:25:37][INFO][queryCheckEmail]  Query succeed.
+[2019/06/06 21:25:37][INFO][queryCheckEmail]  Get salt: c6bf191d
+[2019/06/06 21:25:37][INFO][IMDLogin]  Get Salt: c6bf191d
+[2019/06/06 21:25:37][INFO][emailAndPassCheck]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM users WHERE email = 'sunzexi9920@gmail.com' AND pword = '01290f68a1131c69e996f7c025b0461f27dc6a2535d9c9fe691d5b8880116e3a1bccdf3ace838fd5a16176053e557e90c26e9cfe82ab6aca9e527be70ef04b67'
+[2019/06/06 21:25:37][INFO][emailAndPassCheck]  Query succeed.
+[2019/06/06 21:25:37][INFO][emailAndPassCheck]  Get num: 1
+[2019/06/06 21:25:37][INFO][IMDLogin]  Login Success!
+[2019/06/06 21:25:37][INFO][vertifyExistingSession]  Trying query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND status = 1
+[2019/06/06 21:25:37][INFO][vertifyExistingSession]  Query succeess.
+[2019/06/06 21:25:37][INFO][vertifyExistingSession]  Get num: 0
+[2019/06/06 21:25:37][INFO][insertNewStatus]  Trying Querycom.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO sessions(email, sessionID, timeCreated, lastUsed, exprTime, status)VALUES('sunzexi9920@gmail.com', 'cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8', '2019-06-06 21:25:37.718', '2019-06-06 21:25:37.718', '2019-06-07 02:25:37.718', 1)
+[2019/06/06 21:26:01][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:26:01][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8"}
+[2019/06/06 21:26:01][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:26:01][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:26:01][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:26:01][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:26:01][INFO][findUsersAndSessionID]  Find num: 1
+[2019/06/06 21:26:01][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:26:01][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = 'cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8' 
+[2019/06/06 21:26:01][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:26:01][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = 'cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8'
+[2019/06/06 21:26:01][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:26:01][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:25:38.0
+[2019/06/06 21:26:01][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:25:38.0
+[2019/06/06 21:26:01][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:26:01.228' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = 'cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8'
+[2019/06/06 21:26:01][INFO][updateStatusAndTimestamp]  SessionID: cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8 ACTIVE
+[2019/06/06 21:26:01][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:26:01][INFO][verifyPrivilegePage]  Received User and Password
+[2019/06/06 21:26:01][INFO][verifyPrivilegePage]  Request:
+{"email":"sunzexi9920@gmail.com","plevel":3}
+[2019/06/06 21:26:01][INFO][getPrivilegeLevel]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel AS plevel FROM users WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:26:06][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:26:06][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8"}
+[2019/06/06 21:26:06][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:26:06][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:26:06][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:26:06][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:26:06][INFO][findUsersAndSessionID]  Find num: 1
+[2019/06/06 21:26:06][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:26:06][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = 'cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8' 
+[2019/06/06 21:26:06][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:26:06][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = 'cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8'
+[2019/06/06 21:26:06][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:26:06][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:26:01.0
+[2019/06/06 21:26:06][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:25:38.0
+[2019/06/06 21:26:06][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:26:06.499' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = 'cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8'
+[2019/06/06 21:26:06][INFO][updateStatusAndTimestamp]  SessionID: cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8 ACTIVE
+[2019/06/06 21:26:06][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:26:06][INFO][verifyPrivilegePage]  Received User and Password
+[2019/06/06 21:26:06][INFO][verifyPrivilegePage]  Request:
+{"email":"sunzexi9920@gmail.com","plevel":4}
+[2019/06/06 21:26:06][INFO][getPrivilegeLevel]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel AS plevel FROM users WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:26:12][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:26:12][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8"}
+[2019/06/06 21:26:12][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:26:12][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:26:12][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:26:12][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:26:12][INFO][findUsersAndSessionID]  Find num: 1
+[2019/06/06 21:26:12][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:26:12][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = 'cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8' 
+[2019/06/06 21:26:12][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:26:12][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = 'cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8'
+[2019/06/06 21:26:12][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:26:12][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:26:06.0
+[2019/06/06 21:26:12][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:25:38.0
+[2019/06/06 21:26:12][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:26:12.85' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = 'cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8'
+[2019/06/06 21:26:12][INFO][updateStatusAndTimestamp]  SessionID: cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8 ACTIVE
+[2019/06/06 21:26:12][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:26:19][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:26:19][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8"}
+[2019/06/06 21:26:19][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:26:19][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:26:19][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:26:19][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:26:19][INFO][findUsersAndSessionID]  Find num: 1
+[2019/06/06 21:26:19][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:26:19][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = 'cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8' 
+[2019/06/06 21:26:19][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:26:19][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = 'cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8'
+[2019/06/06 21:26:19][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:26:19][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:26:13.0
+[2019/06/06 21:26:19][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:25:38.0
+[2019/06/06 21:26:19][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:26:19.122' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = 'cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8'
+[2019/06/06 21:26:19][INFO][updateStatusAndTimestamp]  SessionID: cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8 ACTIVE
+[2019/06/06 21:26:19][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:26:26][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:26:26][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8"}
+[2019/06/06 21:26:26][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:26:26][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:26:26][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:26:26][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:26:26][INFO][findUsersAndSessionID]  Find num: 1
+[2019/06/06 21:26:26][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:26:26][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = 'cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8' 
+[2019/06/06 21:26:26][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:26:26][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = 'cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8'
+[2019/06/06 21:26:26][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:26:26][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:26:19.0
+[2019/06/06 21:26:26][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:25:38.0
+[2019/06/06 21:26:26][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:26:26.889' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = 'cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8'
+[2019/06/06 21:26:27][INFO][updateStatusAndTimestamp]  SessionID: cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8 ACTIVE
+[2019/06/06 21:26:27][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:26:32][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:26:32][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8"}
+[2019/06/06 21:26:32][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:26:32][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:26:32][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:26:32][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:26:32][INFO][findUsersAndSessionID]  Find num: 1
+[2019/06/06 21:26:32][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:26:32][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = 'cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8' 
+[2019/06/06 21:26:32][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:26:32][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = 'cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8'
+[2019/06/06 21:26:32][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:26:32][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:26:27.0
+[2019/06/06 21:26:32][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:25:38.0
+[2019/06/06 21:26:32][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:26:32.301' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = 'cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8'
+[2019/06/06 21:26:32][INFO][updateStatusAndTimestamp]  SessionID: cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8 ACTIVE
+[2019/06/06 21:26:32][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:27:21][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:27:21][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8"}
+[2019/06/06 21:27:21][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:27:21][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:27:21][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:27:21][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:27:21][INFO][findUsersAndSessionID]  Find num: 1
+[2019/06/06 21:27:21][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:27:21][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = 'cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8' 
+[2019/06/06 21:27:21][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:27:21][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = 'cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8'
+[2019/06/06 21:27:21][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:27:21][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:26:32.0
+[2019/06/06 21:27:21][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:25:38.0
+[2019/06/06 21:27:21][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:27:21.152' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = 'cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8'
+[2019/06/06 21:27:21][INFO][updateStatusAndTimestamp]  SessionID: cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8 ACTIVE
+[2019/06/06 21:27:21][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:27:36][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:27:36][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8"}
+[2019/06/06 21:27:36][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:27:36][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:27:36][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:27:36][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:27:36][INFO][findUsersAndSessionID]  Find num: 1
+[2019/06/06 21:27:36][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:27:36][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = 'cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8' 
+[2019/06/06 21:27:36][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:27:36][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = 'cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8'
+[2019/06/06 21:27:36][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:27:36][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:27:21.0
+[2019/06/06 21:27:36][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:25:38.0
+[2019/06/06 21:27:36][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:27:36.584' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = 'cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8'
+[2019/06/06 21:27:36][INFO][updateStatusAndTimestamp]  SessionID: cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8 ACTIVE
+[2019/06/06 21:27:36][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:27:44][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:27:44][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8"}
+[2019/06/06 21:27:44][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:27:44][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:27:44][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:27:44][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:27:44][INFO][findUsersAndSessionID]  Find num: 1
+[2019/06/06 21:27:44][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:27:44][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = 'cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8' 
+[2019/06/06 21:27:44][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:27:44][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = 'cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8'
+[2019/06/06 21:27:44][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:27:44][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:27:37.0
+[2019/06/06 21:27:44][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:25:38.0
+[2019/06/06 21:27:44][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:27:44.21' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = 'cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8'
+[2019/06/06 21:27:44][INFO][updateStatusAndTimestamp]  SessionID: cbbf68e7fbd45c862ffc097e3f998408083ab8714e9e53f4450c709a2bece80eff69ee50234db0b4026f70884721b2d5e4f37ded8e86748cf5cbd7a65d68fdc8 ACTIVE
+[2019/06/06 21:27:44][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:32:26][INFO][IMDLogin]  Received User and Password
+[2019/06/06 21:32:26][INFO][IMDLogin]  Request:
+{"email":"sunzexi9920@gmail.com","password":"SZX920405szx!"}
+[2019/06/06 21:32:26][INFO][queryCheckEmail]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM users WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:32:26][INFO][queryCheckEmail]  Query succeed.
+[2019/06/06 21:32:26][INFO][queryCheckEmail]  Get num: 1
+[2019/06/06 21:32:26][INFO][getPassword]  GETPASSWORD Function: [C@606976eb
+[2019/06/06 21:32:26][INFO][queryCheckEmail]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT salt AS salt FROM users WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:32:26][INFO][queryCheckEmail]  Query succeed.
+[2019/06/06 21:32:26][INFO][queryCheckEmail]  Get salt: c6bf191d
+[2019/06/06 21:32:26][INFO][IMDLogin]  Get Salt: c6bf191d
+[2019/06/06 21:32:26][INFO][emailAndPassCheck]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM users WHERE email = 'sunzexi9920@gmail.com' AND pword = '01290f68a1131c69e996f7c025b0461f27dc6a2535d9c9fe691d5b8880116e3a1bccdf3ace838fd5a16176053e557e90c26e9cfe82ab6aca9e527be70ef04b67'
+[2019/06/06 21:32:27][INFO][emailAndPassCheck]  Query succeed.
+[2019/06/06 21:32:27][INFO][emailAndPassCheck]  Get num: 1
+[2019/06/06 21:32:27][INFO][IMDLogin]  Login Success!
+[2019/06/06 21:32:27][INFO][vertifyExistingSession]  Trying query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND status = 1
+[2019/06/06 21:32:27][INFO][vertifyExistingSession]  Query succeess.
+[2019/06/06 21:32:27][INFO][vertifyExistingSession]  Get num: 1
+[2019/06/06 21:32:27][INFO][alterStatusSession]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET status = 4 WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:32:27][INFO][alterStatusSession]  Updating Query...
+[2019/06/06 21:32:27][INFO][insertNewStatus]  Trying Querycom.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO sessions(email, sessionID, timeCreated, lastUsed, exprTime, status)VALUES('sunzexi9920@gmail.com', '460faf0dab80c951ad92bc6f698654f6820e74bfde00c6d5a23e91c37b422e8624adbc4afdb31fb38d9d7151e8e127b50d5a9e51d986b7861141fac81babb6f0', '2019-06-06 21:32:27.003', '2019-06-06 21:32:27.003', '2019-06-07 02:32:27.003', 1)
+[2019/06/06 21:32:32][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:32:32][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"460faf0dab80c951ad92bc6f698654f6820e74bfde00c6d5a23e91c37b422e8624adbc4afdb31fb38d9d7151e8e127b50d5a9e51d986b7861141fac81babb6f0"}
+[2019/06/06 21:32:32][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:32:32][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:32:32][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:32:32][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:32:32][INFO][findUsersAndSessionID]  Find num: 2
+[2019/06/06 21:32:32][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:32:32][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '460faf0dab80c951ad92bc6f698654f6820e74bfde00c6d5a23e91c37b422e8624adbc4afdb31fb38d9d7151e8e127b50d5a9e51d986b7861141fac81babb6f0' 
+[2019/06/06 21:32:32][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:32:32][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = '460faf0dab80c951ad92bc6f698654f6820e74bfde00c6d5a23e91c37b422e8624adbc4afdb31fb38d9d7151e8e127b50d5a9e51d986b7861141fac81babb6f0'
+[2019/06/06 21:32:32][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:32:32][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:32:27.0
+[2019/06/06 21:32:32][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:32:27.0
+[2019/06/06 21:32:32][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:32:32.817' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '460faf0dab80c951ad92bc6f698654f6820e74bfde00c6d5a23e91c37b422e8624adbc4afdb31fb38d9d7151e8e127b50d5a9e51d986b7861141fac81babb6f0'
+[2019/06/06 21:32:32][INFO][updateStatusAndTimestamp]  SessionID: 460faf0dab80c951ad92bc6f698654f6820e74bfde00c6d5a23e91c37b422e8624adbc4afdb31fb38d9d7151e8e127b50d5a9e51d986b7861141fac81babb6f0 ACTIVE
+[2019/06/06 21:32:32][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:32:45][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:32:45][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"460faf0dab80c951ad92bc6f698654f6820e74bfde00c6d5a23e91c37b422e8624adbc4afdb31fb38d9d7151e8e127b50d5a9e51d986b7861141fac81babb6f0"}
+[2019/06/06 21:32:45][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:32:45][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:32:45][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:32:45][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:32:45][INFO][findUsersAndSessionID]  Find num: 2
+[2019/06/06 21:32:45][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:32:45][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '460faf0dab80c951ad92bc6f698654f6820e74bfde00c6d5a23e91c37b422e8624adbc4afdb31fb38d9d7151e8e127b50d5a9e51d986b7861141fac81babb6f0' 
+[2019/06/06 21:32:45][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:32:45][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = '460faf0dab80c951ad92bc6f698654f6820e74bfde00c6d5a23e91c37b422e8624adbc4afdb31fb38d9d7151e8e127b50d5a9e51d986b7861141fac81babb6f0'
+[2019/06/06 21:32:46][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:32:46][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:32:33.0
+[2019/06/06 21:32:46][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:32:27.0
+[2019/06/06 21:32:46][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:32:45.975' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '460faf0dab80c951ad92bc6f698654f6820e74bfde00c6d5a23e91c37b422e8624adbc4afdb31fb38d9d7151e8e127b50d5a9e51d986b7861141fac81babb6f0'
+[2019/06/06 21:32:46][INFO][updateStatusAndTimestamp]  SessionID: 460faf0dab80c951ad92bc6f698654f6820e74bfde00c6d5a23e91c37b422e8624adbc4afdb31fb38d9d7151e8e127b50d5a9e51d986b7861141fac81babb6f0 ACTIVE
+[2019/06/06 21:32:46][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:32:52][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:32:52][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"460faf0dab80c951ad92bc6f698654f6820e74bfde00c6d5a23e91c37b422e8624adbc4afdb31fb38d9d7151e8e127b50d5a9e51d986b7861141fac81babb6f0"}
+[2019/06/06 21:32:52][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:32:52][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:32:52][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:32:52][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:32:52][INFO][findUsersAndSessionID]  Find num: 2
+[2019/06/06 21:32:52][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:32:52][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '460faf0dab80c951ad92bc6f698654f6820e74bfde00c6d5a23e91c37b422e8624adbc4afdb31fb38d9d7151e8e127b50d5a9e51d986b7861141fac81babb6f0' 
+[2019/06/06 21:32:52][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:32:52][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = '460faf0dab80c951ad92bc6f698654f6820e74bfde00c6d5a23e91c37b422e8624adbc4afdb31fb38d9d7151e8e127b50d5a9e51d986b7861141fac81babb6f0'
+[2019/06/06 21:32:52][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:32:52][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:32:46.0
+[2019/06/06 21:32:52][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:32:27.0
+[2019/06/06 21:32:52][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:32:52.111' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '460faf0dab80c951ad92bc6f698654f6820e74bfde00c6d5a23e91c37b422e8624adbc4afdb31fb38d9d7151e8e127b50d5a9e51d986b7861141fac81babb6f0'
+[2019/06/06 21:32:52][INFO][updateStatusAndTimestamp]  SessionID: 460faf0dab80c951ad92bc6f698654f6820e74bfde00c6d5a23e91c37b422e8624adbc4afdb31fb38d9d7151e8e127b50d5a9e51d986b7861141fac81babb6f0 ACTIVE
+[2019/06/06 21:32:52][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:35:21][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:35:21][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"460faf0dab80c951ad92bc6f698654f6820e74bfde00c6d5a23e91c37b422e8624adbc4afdb31fb38d9d7151e8e127b50d5a9e51d986b7861141fac81babb6f0"}
+[2019/06/06 21:35:21][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:35:21][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:35:21][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:35:21][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:35:21][INFO][findUsersAndSessionID]  Find num: 2
+[2019/06/06 21:35:21][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:35:21][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '460faf0dab80c951ad92bc6f698654f6820e74bfde00c6d5a23e91c37b422e8624adbc4afdb31fb38d9d7151e8e127b50d5a9e51d986b7861141fac81babb6f0' 
+[2019/06/06 21:35:21][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:35:21][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = '460faf0dab80c951ad92bc6f698654f6820e74bfde00c6d5a23e91c37b422e8624adbc4afdb31fb38d9d7151e8e127b50d5a9e51d986b7861141fac81babb6f0'
+[2019/06/06 21:35:22][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:35:22][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:32:52.0
+[2019/06/06 21:35:22][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:32:27.0
+[2019/06/06 21:35:22][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:35:21.975' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '460faf0dab80c951ad92bc6f698654f6820e74bfde00c6d5a23e91c37b422e8624adbc4afdb31fb38d9d7151e8e127b50d5a9e51d986b7861141fac81babb6f0'
+[2019/06/06 21:35:22][INFO][updateStatusAndTimestamp]  SessionID: 460faf0dab80c951ad92bc6f698654f6820e74bfde00c6d5a23e91c37b422e8624adbc4afdb31fb38d9d7151e8e127b50d5a9e51d986b7861141fac81babb6f0 ACTIVE
+[2019/06/06 21:35:22][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:35:30][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:35:30][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"460faf0dab80c951ad92bc6f698654f6820e74bfde00c6d5a23e91c37b422e8624adbc4afdb31fb38d9d7151e8e127b50d5a9e51d986b7861141fac81babb6f0"}
+[2019/06/06 21:35:30][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:35:30][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:35:30][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:35:30][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:35:30][INFO][findUsersAndSessionID]  Find num: 2
+[2019/06/06 21:35:30][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:35:30][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '460faf0dab80c951ad92bc6f698654f6820e74bfde00c6d5a23e91c37b422e8624adbc4afdb31fb38d9d7151e8e127b50d5a9e51d986b7861141fac81babb6f0' 
+[2019/06/06 21:35:30][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:35:30][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = '460faf0dab80c951ad92bc6f698654f6820e74bfde00c6d5a23e91c37b422e8624adbc4afdb31fb38d9d7151e8e127b50d5a9e51d986b7861141fac81babb6f0'
+[2019/06/06 21:35:30][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:35:30][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:35:22.0
+[2019/06/06 21:35:30][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:32:27.0
+[2019/06/06 21:35:30][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:35:30.288' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '460faf0dab80c951ad92bc6f698654f6820e74bfde00c6d5a23e91c37b422e8624adbc4afdb31fb38d9d7151e8e127b50d5a9e51d986b7861141fac81babb6f0'
+[2019/06/06 21:35:30][INFO][updateStatusAndTimestamp]  SessionID: 460faf0dab80c951ad92bc6f698654f6820e74bfde00c6d5a23e91c37b422e8624adbc4afdb31fb38d9d7151e8e127b50d5a9e51d986b7861141fac81babb6f0 ACTIVE
+[2019/06/06 21:35:30][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:37:03][INFO][IMDLogin]  Received User and Password
+[2019/06/06 21:37:03][INFO][IMDLogin]  Request:
+{"email":"sunzexi9920@gmail.com","password":"SZX920405szx!"}
+[2019/06/06 21:37:03][INFO][queryCheckEmail]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM users WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:37:03][INFO][queryCheckEmail]  Query succeed.
+[2019/06/06 21:37:03][INFO][queryCheckEmail]  Get num: 1
+[2019/06/06 21:37:03][INFO][getPassword]  GETPASSWORD Function: [C@1c014f5e
+[2019/06/06 21:37:03][INFO][queryCheckEmail]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT salt AS salt FROM users WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:37:03][INFO][queryCheckEmail]  Query succeed.
+[2019/06/06 21:37:03][INFO][queryCheckEmail]  Get salt: c6bf191d
+[2019/06/06 21:37:03][INFO][IMDLogin]  Get Salt: c6bf191d
+[2019/06/06 21:37:03][INFO][emailAndPassCheck]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM users WHERE email = 'sunzexi9920@gmail.com' AND pword = '01290f68a1131c69e996f7c025b0461f27dc6a2535d9c9fe691d5b8880116e3a1bccdf3ace838fd5a16176053e557e90c26e9cfe82ab6aca9e527be70ef04b67'
+[2019/06/06 21:37:03][INFO][emailAndPassCheck]  Query succeed.
+[2019/06/06 21:37:03][INFO][emailAndPassCheck]  Get num: 1
+[2019/06/06 21:37:03][INFO][IMDLogin]  Login Success!
+[2019/06/06 21:37:03][INFO][vertifyExistingSession]  Trying query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND status = 1
+[2019/06/06 21:37:03][INFO][vertifyExistingSession]  Query succeess.
+[2019/06/06 21:37:03][INFO][vertifyExistingSession]  Get num: 1
+[2019/06/06 21:37:03][INFO][alterStatusSession]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET status = 4 WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:37:03][INFO][alterStatusSession]  Updating Query...
+[2019/06/06 21:37:03][INFO][insertNewStatus]  Trying Querycom.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO sessions(email, sessionID, timeCreated, lastUsed, exprTime, status)VALUES('sunzexi9920@gmail.com', '2c6572945477cddfaf0d47e1ab08c4e0624d2cab4507b7e47a9e09809486b58e67891a27dff37e3ba379051ee2dc401ace883a38deb07358953534d925cfae31', '2019-06-06 21:37:03.387', '2019-06-06 21:37:03.387', '2019-06-07 02:37:03.387', 1)
+[2019/06/06 21:37:07][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:37:07][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"2c6572945477cddfaf0d47e1ab08c4e0624d2cab4507b7e47a9e09809486b58e67891a27dff37e3ba379051ee2dc401ace883a38deb07358953534d925cfae31"}
+[2019/06/06 21:37:07][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:37:07][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:37:07][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:37:07][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:37:07][INFO][findUsersAndSessionID]  Find num: 3
+[2019/06/06 21:37:07][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:37:07][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '2c6572945477cddfaf0d47e1ab08c4e0624d2cab4507b7e47a9e09809486b58e67891a27dff37e3ba379051ee2dc401ace883a38deb07358953534d925cfae31' 
+[2019/06/06 21:37:07][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:37:07][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = '2c6572945477cddfaf0d47e1ab08c4e0624d2cab4507b7e47a9e09809486b58e67891a27dff37e3ba379051ee2dc401ace883a38deb07358953534d925cfae31'
+[2019/06/06 21:37:07][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:37:07][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:37:03.0
+[2019/06/06 21:37:07][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:37:03.0
+[2019/06/06 21:37:07][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:37:07.889' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '2c6572945477cddfaf0d47e1ab08c4e0624d2cab4507b7e47a9e09809486b58e67891a27dff37e3ba379051ee2dc401ace883a38deb07358953534d925cfae31'
+[2019/06/06 21:37:08][INFO][updateStatusAndTimestamp]  SessionID: 2c6572945477cddfaf0d47e1ab08c4e0624d2cab4507b7e47a9e09809486b58e67891a27dff37e3ba379051ee2dc401ace883a38deb07358953534d925cfae31 ACTIVE
+[2019/06/06 21:37:08][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:37:15][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:37:15][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"2c6572945477cddfaf0d47e1ab08c4e0624d2cab4507b7e47a9e09809486b58e67891a27dff37e3ba379051ee2dc401ace883a38deb07358953534d925cfae31"}
+[2019/06/06 21:37:15][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:37:15][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:37:15][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:37:15][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:37:15][INFO][findUsersAndSessionID]  Find num: 3
+[2019/06/06 21:37:15][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:37:15][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '2c6572945477cddfaf0d47e1ab08c4e0624d2cab4507b7e47a9e09809486b58e67891a27dff37e3ba379051ee2dc401ace883a38deb07358953534d925cfae31' 
+[2019/06/06 21:37:15][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:37:15][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = '2c6572945477cddfaf0d47e1ab08c4e0624d2cab4507b7e47a9e09809486b58e67891a27dff37e3ba379051ee2dc401ace883a38deb07358953534d925cfae31'
+[2019/06/06 21:37:15][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:37:15][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:37:08.0
+[2019/06/06 21:37:15][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:37:03.0
+[2019/06/06 21:37:15][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:37:15.178' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '2c6572945477cddfaf0d47e1ab08c4e0624d2cab4507b7e47a9e09809486b58e67891a27dff37e3ba379051ee2dc401ace883a38deb07358953534d925cfae31'
+[2019/06/06 21:37:15][INFO][updateStatusAndTimestamp]  SessionID: 2c6572945477cddfaf0d47e1ab08c4e0624d2cab4507b7e47a9e09809486b58e67891a27dff37e3ba379051ee2dc401ace883a38deb07358953534d925cfae31 ACTIVE
+[2019/06/06 21:37:15][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:37:25][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:37:25][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"2c6572945477cddfaf0d47e1ab08c4e0624d2cab4507b7e47a9e09809486b58e67891a27dff37e3ba379051ee2dc401ace883a38deb07358953534d925cfae31"}
+[2019/06/06 21:37:25][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:37:25][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:37:25][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:37:25][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:37:25][INFO][findUsersAndSessionID]  Find num: 3
+[2019/06/06 21:37:25][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:37:25][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '2c6572945477cddfaf0d47e1ab08c4e0624d2cab4507b7e47a9e09809486b58e67891a27dff37e3ba379051ee2dc401ace883a38deb07358953534d925cfae31' 
+[2019/06/06 21:37:25][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:37:25][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = '2c6572945477cddfaf0d47e1ab08c4e0624d2cab4507b7e47a9e09809486b58e67891a27dff37e3ba379051ee2dc401ace883a38deb07358953534d925cfae31'
+[2019/06/06 21:37:25][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:37:25][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:37:15.0
+[2019/06/06 21:37:25][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:37:03.0
+[2019/06/06 21:37:25][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:37:25.537' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '2c6572945477cddfaf0d47e1ab08c4e0624d2cab4507b7e47a9e09809486b58e67891a27dff37e3ba379051ee2dc401ace883a38deb07358953534d925cfae31'
+[2019/06/06 21:37:25][INFO][updateStatusAndTimestamp]  SessionID: 2c6572945477cddfaf0d47e1ab08c4e0624d2cab4507b7e47a9e09809486b58e67891a27dff37e3ba379051ee2dc401ace883a38deb07358953534d925cfae31 ACTIVE
+[2019/06/06 21:37:25][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:38:07][INFO][IMDLogin]  Received User and Password
+[2019/06/06 21:38:07][INFO][IMDLogin]  Request:
+{"email":"sunzexi9920@gmail.com","password":"SZX920405szx!"}
+[2019/06/06 21:38:07][INFO][queryCheckEmail]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM users WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:38:07][INFO][queryCheckEmail]  Query succeed.
+[2019/06/06 21:38:07][INFO][queryCheckEmail]  Get num: 1
+[2019/06/06 21:38:07][INFO][getPassword]  GETPASSWORD Function: [C@dfbe025
+[2019/06/06 21:38:07][INFO][queryCheckEmail]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT salt AS salt FROM users WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:38:07][INFO][queryCheckEmail]  Query succeed.
+[2019/06/06 21:38:07][INFO][queryCheckEmail]  Get salt: c6bf191d
+[2019/06/06 21:38:07][INFO][IMDLogin]  Get Salt: c6bf191d
+[2019/06/06 21:38:07][INFO][emailAndPassCheck]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM users WHERE email = 'sunzexi9920@gmail.com' AND pword = '01290f68a1131c69e996f7c025b0461f27dc6a2535d9c9fe691d5b8880116e3a1bccdf3ace838fd5a16176053e557e90c26e9cfe82ab6aca9e527be70ef04b67'
+[2019/06/06 21:38:07][INFO][emailAndPassCheck]  Query succeed.
+[2019/06/06 21:38:07][INFO][emailAndPassCheck]  Get num: 1
+[2019/06/06 21:38:07][INFO][IMDLogin]  Login Success!
+[2019/06/06 21:38:07][INFO][vertifyExistingSession]  Trying query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND status = 1
+[2019/06/06 21:38:07][INFO][vertifyExistingSession]  Query succeess.
+[2019/06/06 21:38:07][INFO][vertifyExistingSession]  Get num: 1
+[2019/06/06 21:38:07][INFO][alterStatusSession]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET status = 4 WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:38:07][INFO][alterStatusSession]  Updating Query...
+[2019/06/06 21:38:07][INFO][insertNewStatus]  Trying Querycom.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO sessions(email, sessionID, timeCreated, lastUsed, exprTime, status)VALUES('sunzexi9920@gmail.com', '869225cf38f1df8d53a409f32fc0f1908a851e8aebc622a39889e2b10b7b6f4ad1af9c2f0e392c676f8d5bd0876143a3b24a287036ebd711d3e3c32320bb2379', '2019-06-06 21:38:07.249', '2019-06-06 21:38:07.249', '2019-06-07 02:38:07.249', 1)
+[2019/06/06 21:38:12][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:38:12][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"869225cf38f1df8d53a409f32fc0f1908a851e8aebc622a39889e2b10b7b6f4ad1af9c2f0e392c676f8d5bd0876143a3b24a287036ebd711d3e3c32320bb2379"}
+[2019/06/06 21:38:12][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:38:12][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:38:12][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:38:12][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:38:12][INFO][findUsersAndSessionID]  Find num: 4
+[2019/06/06 21:38:12][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:38:12][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '869225cf38f1df8d53a409f32fc0f1908a851e8aebc622a39889e2b10b7b6f4ad1af9c2f0e392c676f8d5bd0876143a3b24a287036ebd711d3e3c32320bb2379' 
+[2019/06/06 21:38:12][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:38:12][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = '869225cf38f1df8d53a409f32fc0f1908a851e8aebc622a39889e2b10b7b6f4ad1af9c2f0e392c676f8d5bd0876143a3b24a287036ebd711d3e3c32320bb2379'
+[2019/06/06 21:38:12][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:38:12][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:38:07.0
+[2019/06/06 21:38:12][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:38:07.0
+[2019/06/06 21:38:12][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:38:12.352' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '869225cf38f1df8d53a409f32fc0f1908a851e8aebc622a39889e2b10b7b6f4ad1af9c2f0e392c676f8d5bd0876143a3b24a287036ebd711d3e3c32320bb2379'
+[2019/06/06 21:38:12][INFO][updateStatusAndTimestamp]  SessionID: 869225cf38f1df8d53a409f32fc0f1908a851e8aebc622a39889e2b10b7b6f4ad1af9c2f0e392c676f8d5bd0876143a3b24a287036ebd711d3e3c32320bb2379 ACTIVE
+[2019/06/06 21:38:12][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:38:16][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:38:16][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"869225cf38f1df8d53a409f32fc0f1908a851e8aebc622a39889e2b10b7b6f4ad1af9c2f0e392c676f8d5bd0876143a3b24a287036ebd711d3e3c32320bb2379"}
+[2019/06/06 21:38:16][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:38:16][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:38:16][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:38:16][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:38:16][INFO][findUsersAndSessionID]  Find num: 4
+[2019/06/06 21:38:16][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:38:16][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '869225cf38f1df8d53a409f32fc0f1908a851e8aebc622a39889e2b10b7b6f4ad1af9c2f0e392c676f8d5bd0876143a3b24a287036ebd711d3e3c32320bb2379' 
+[2019/06/06 21:38:16][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:38:16][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = '869225cf38f1df8d53a409f32fc0f1908a851e8aebc622a39889e2b10b7b6f4ad1af9c2f0e392c676f8d5bd0876143a3b24a287036ebd711d3e3c32320bb2379'
+[2019/06/06 21:38:16][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:38:16][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:38:12.0
+[2019/06/06 21:38:16][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:38:07.0
+[2019/06/06 21:38:16][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:38:16.292' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '869225cf38f1df8d53a409f32fc0f1908a851e8aebc622a39889e2b10b7b6f4ad1af9c2f0e392c676f8d5bd0876143a3b24a287036ebd711d3e3c32320bb2379'
+[2019/06/06 21:38:16][INFO][updateStatusAndTimestamp]  SessionID: 869225cf38f1df8d53a409f32fc0f1908a851e8aebc622a39889e2b10b7b6f4ad1af9c2f0e392c676f8d5bd0876143a3b24a287036ebd711d3e3c32320bb2379 ACTIVE
+[2019/06/06 21:38:16][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:38:30][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:38:30][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"869225cf38f1df8d53a409f32fc0f1908a851e8aebc622a39889e2b10b7b6f4ad1af9c2f0e392c676f8d5bd0876143a3b24a287036ebd711d3e3c32320bb2379"}
+[2019/06/06 21:38:30][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:38:30][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:38:30][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:38:30][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:38:30][INFO][findUsersAndSessionID]  Find num: 4
+[2019/06/06 21:38:30][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:38:30][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '869225cf38f1df8d53a409f32fc0f1908a851e8aebc622a39889e2b10b7b6f4ad1af9c2f0e392c676f8d5bd0876143a3b24a287036ebd711d3e3c32320bb2379' 
+[2019/06/06 21:38:30][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:38:30][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = '869225cf38f1df8d53a409f32fc0f1908a851e8aebc622a39889e2b10b7b6f4ad1af9c2f0e392c676f8d5bd0876143a3b24a287036ebd711d3e3c32320bb2379'
+[2019/06/06 21:38:30][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:38:30][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:38:16.0
+[2019/06/06 21:38:30][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:38:07.0
+[2019/06/06 21:38:30][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:38:30.66' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '869225cf38f1df8d53a409f32fc0f1908a851e8aebc622a39889e2b10b7b6f4ad1af9c2f0e392c676f8d5bd0876143a3b24a287036ebd711d3e3c32320bb2379'
+[2019/06/06 21:38:30][INFO][updateStatusAndTimestamp]  SessionID: 869225cf38f1df8d53a409f32fc0f1908a851e8aebc622a39889e2b10b7b6f4ad1af9c2f0e392c676f8d5bd0876143a3b24a287036ebd711d3e3c32320bb2379 ACTIVE
+[2019/06/06 21:38:30][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:40:38][INFO][IMDLogin]  Received User and Password
+[2019/06/06 21:40:38][INFO][IMDLogin]  Request:
+{"email":"sunzexi9920@gmail.com","password":"SZX920405szx!"}
+[2019/06/06 21:40:38][INFO][queryCheckEmail]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM users WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:40:38][INFO][queryCheckEmail]  Query succeed.
+[2019/06/06 21:40:38][INFO][queryCheckEmail]  Get num: 1
+[2019/06/06 21:40:38][INFO][getPassword]  GETPASSWORD Function: [C@6ec47f94
+[2019/06/06 21:40:38][INFO][queryCheckEmail]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT salt AS salt FROM users WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:40:38][INFO][queryCheckEmail]  Query succeed.
+[2019/06/06 21:40:38][INFO][queryCheckEmail]  Get salt: c6bf191d
+[2019/06/06 21:40:38][INFO][IMDLogin]  Get Salt: c6bf191d
+[2019/06/06 21:40:38][INFO][emailAndPassCheck]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM users WHERE email = 'sunzexi9920@gmail.com' AND pword = '01290f68a1131c69e996f7c025b0461f27dc6a2535d9c9fe691d5b8880116e3a1bccdf3ace838fd5a16176053e557e90c26e9cfe82ab6aca9e527be70ef04b67'
+[2019/06/06 21:40:38][INFO][emailAndPassCheck]  Query succeed.
+[2019/06/06 21:40:38][INFO][emailAndPassCheck]  Get num: 1
+[2019/06/06 21:40:38][INFO][IMDLogin]  Login Success!
+[2019/06/06 21:40:38][INFO][vertifyExistingSession]  Trying query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND status = 1
+[2019/06/06 21:40:38][INFO][vertifyExistingSession]  Query succeess.
+[2019/06/06 21:40:38][INFO][vertifyExistingSession]  Get num: 1
+[2019/06/06 21:40:38][INFO][alterStatusSession]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET status = 4 WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:40:38][INFO][alterStatusSession]  Updating Query...
+[2019/06/06 21:40:38][INFO][insertNewStatus]  Trying Querycom.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO sessions(email, sessionID, timeCreated, lastUsed, exprTime, status)VALUES('sunzexi9920@gmail.com', '928cb9096c6be0b538d3df59d84c0492406c7be118e1f3b22d8e9d10ab356e601893d006533c1ead30ea66f8bf8962c81ce96305d57b5d3a1fbbcc3276f2058e', '2019-06-06 21:40:38.379', '2019-06-06 21:40:38.379', '2019-06-07 02:40:38.379', 1)
+[2019/06/06 21:40:42][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:40:42][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"928cb9096c6be0b538d3df59d84c0492406c7be118e1f3b22d8e9d10ab356e601893d006533c1ead30ea66f8bf8962c81ce96305d57b5d3a1fbbcc3276f2058e"}
+[2019/06/06 21:40:42][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:40:42][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:40:42][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:40:42][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:40:42][INFO][findUsersAndSessionID]  Find num: 5
+[2019/06/06 21:40:42][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:40:42][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '928cb9096c6be0b538d3df59d84c0492406c7be118e1f3b22d8e9d10ab356e601893d006533c1ead30ea66f8bf8962c81ce96305d57b5d3a1fbbcc3276f2058e' 
+[2019/06/06 21:40:42][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:40:42][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = '928cb9096c6be0b538d3df59d84c0492406c7be118e1f3b22d8e9d10ab356e601893d006533c1ead30ea66f8bf8962c81ce96305d57b5d3a1fbbcc3276f2058e'
+[2019/06/06 21:40:43][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:40:43][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:40:38.0
+[2019/06/06 21:40:43][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:40:38.0
+[2019/06/06 21:40:43][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:40:42.996' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '928cb9096c6be0b538d3df59d84c0492406c7be118e1f3b22d8e9d10ab356e601893d006533c1ead30ea66f8bf8962c81ce96305d57b5d3a1fbbcc3276f2058e'
+[2019/06/06 21:40:43][INFO][updateStatusAndTimestamp]  SessionID: 928cb9096c6be0b538d3df59d84c0492406c7be118e1f3b22d8e9d10ab356e601893d006533c1ead30ea66f8bf8962c81ce96305d57b5d3a1fbbcc3276f2058e ACTIVE
+[2019/06/06 21:40:43][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:40:46][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:40:46][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"928cb9096c6be0b538d3df59d84c0492406c7be118e1f3b22d8e9d10ab356e601893d006533c1ead30ea66f8bf8962c81ce96305d57b5d3a1fbbcc3276f2058e"}
+[2019/06/06 21:40:46][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:40:46][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:40:46][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:40:46][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:40:46][INFO][findUsersAndSessionID]  Find num: 5
+[2019/06/06 21:40:46][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:40:46][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '928cb9096c6be0b538d3df59d84c0492406c7be118e1f3b22d8e9d10ab356e601893d006533c1ead30ea66f8bf8962c81ce96305d57b5d3a1fbbcc3276f2058e' 
+[2019/06/06 21:40:46][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:40:46][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = '928cb9096c6be0b538d3df59d84c0492406c7be118e1f3b22d8e9d10ab356e601893d006533c1ead30ea66f8bf8962c81ce96305d57b5d3a1fbbcc3276f2058e'
+[2019/06/06 21:40:46][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:40:46][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:40:43.0
+[2019/06/06 21:40:46][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:40:38.0
+[2019/06/06 21:40:46][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:40:46.325' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '928cb9096c6be0b538d3df59d84c0492406c7be118e1f3b22d8e9d10ab356e601893d006533c1ead30ea66f8bf8962c81ce96305d57b5d3a1fbbcc3276f2058e'
+[2019/06/06 21:40:46][INFO][updateStatusAndTimestamp]  SessionID: 928cb9096c6be0b538d3df59d84c0492406c7be118e1f3b22d8e9d10ab356e601893d006533c1ead30ea66f8bf8962c81ce96305d57b5d3a1fbbcc3276f2058e ACTIVE
+[2019/06/06 21:40:46][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:40:50][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:40:50][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"928cb9096c6be0b538d3df59d84c0492406c7be118e1f3b22d8e9d10ab356e601893d006533c1ead30ea66f8bf8962c81ce96305d57b5d3a1fbbcc3276f2058e"}
+[2019/06/06 21:40:50][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:40:50][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:40:50][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:40:50][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:40:50][INFO][findUsersAndSessionID]  Find num: 5
+[2019/06/06 21:40:50][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:40:50][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '928cb9096c6be0b538d3df59d84c0492406c7be118e1f3b22d8e9d10ab356e601893d006533c1ead30ea66f8bf8962c81ce96305d57b5d3a1fbbcc3276f2058e' 
+[2019/06/06 21:40:50][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:40:50][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = '928cb9096c6be0b538d3df59d84c0492406c7be118e1f3b22d8e9d10ab356e601893d006533c1ead30ea66f8bf8962c81ce96305d57b5d3a1fbbcc3276f2058e'
+[2019/06/06 21:40:50][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:40:50][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:40:46.0
+[2019/06/06 21:40:50][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:40:38.0
+[2019/06/06 21:40:50][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:40:50.604' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '928cb9096c6be0b538d3df59d84c0492406c7be118e1f3b22d8e9d10ab356e601893d006533c1ead30ea66f8bf8962c81ce96305d57b5d3a1fbbcc3276f2058e'
+[2019/06/06 21:40:50][INFO][updateStatusAndTimestamp]  SessionID: 928cb9096c6be0b538d3df59d84c0492406c7be118e1f3b22d8e9d10ab356e601893d006533c1ead30ea66f8bf8962c81ce96305d57b5d3a1fbbcc3276f2058e ACTIVE
+[2019/06/06 21:40:50][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:41:00][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:41:00][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"928cb9096c6be0b538d3df59d84c0492406c7be118e1f3b22d8e9d10ab356e601893d006533c1ead30ea66f8bf8962c81ce96305d57b5d3a1fbbcc3276f2058e"}
+[2019/06/06 21:41:00][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:41:00][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:41:00][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:41:00][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:41:00][INFO][findUsersAndSessionID]  Find num: 5
+[2019/06/06 21:41:00][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:41:00][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '928cb9096c6be0b538d3df59d84c0492406c7be118e1f3b22d8e9d10ab356e601893d006533c1ead30ea66f8bf8962c81ce96305d57b5d3a1fbbcc3276f2058e' 
+[2019/06/06 21:41:01][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:41:01][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = '928cb9096c6be0b538d3df59d84c0492406c7be118e1f3b22d8e9d10ab356e601893d006533c1ead30ea66f8bf8962c81ce96305d57b5d3a1fbbcc3276f2058e'
+[2019/06/06 21:41:01][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:41:01][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:40:51.0
+[2019/06/06 21:41:01][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:40:38.0
+[2019/06/06 21:41:01][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:41:01.034' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '928cb9096c6be0b538d3df59d84c0492406c7be118e1f3b22d8e9d10ab356e601893d006533c1ead30ea66f8bf8962c81ce96305d57b5d3a1fbbcc3276f2058e'
+[2019/06/06 21:41:01][INFO][updateStatusAndTimestamp]  SessionID: 928cb9096c6be0b538d3df59d84c0492406c7be118e1f3b22d8e9d10ab356e601893d006533c1ead30ea66f8bf8962c81ce96305d57b5d3a1fbbcc3276f2058e ACTIVE
+[2019/06/06 21:41:01][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:41:07][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:41:07][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"928cb9096c6be0b538d3df59d84c0492406c7be118e1f3b22d8e9d10ab356e601893d006533c1ead30ea66f8bf8962c81ce96305d57b5d3a1fbbcc3276f2058e"}
+[2019/06/06 21:41:07][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:41:07][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:41:07][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:41:08][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:41:08][INFO][findUsersAndSessionID]  Find num: 5
+[2019/06/06 21:41:08][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:41:08][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '928cb9096c6be0b538d3df59d84c0492406c7be118e1f3b22d8e9d10ab356e601893d006533c1ead30ea66f8bf8962c81ce96305d57b5d3a1fbbcc3276f2058e' 
+[2019/06/06 21:41:08][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:41:08][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = '928cb9096c6be0b538d3df59d84c0492406c7be118e1f3b22d8e9d10ab356e601893d006533c1ead30ea66f8bf8962c81ce96305d57b5d3a1fbbcc3276f2058e'
+[2019/06/06 21:41:08][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:41:08][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:41:01.0
+[2019/06/06 21:41:08][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:40:38.0
+[2019/06/06 21:41:08][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:41:08.07' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '928cb9096c6be0b538d3df59d84c0492406c7be118e1f3b22d8e9d10ab356e601893d006533c1ead30ea66f8bf8962c81ce96305d57b5d3a1fbbcc3276f2058e'
+[2019/06/06 21:41:08][INFO][updateStatusAndTimestamp]  SessionID: 928cb9096c6be0b538d3df59d84c0492406c7be118e1f3b22d8e9d10ab356e601893d006533c1ead30ea66f8bf8962c81ce96305d57b5d3a1fbbcc3276f2058e ACTIVE
+[2019/06/06 21:41:08][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:41:47][INFO][IMDLogin]  Received User and Password
+[2019/06/06 21:41:47][INFO][IMDLogin]  Request:
+{"email":"sunzexi9920@gmail.com","password":"SZX920405szx!"}
+[2019/06/06 21:41:47][INFO][queryCheckEmail]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM users WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:41:47][INFO][queryCheckEmail]  Query succeed.
+[2019/06/06 21:41:47][INFO][queryCheckEmail]  Get num: 1
+[2019/06/06 21:41:47][INFO][getPassword]  GETPASSWORD Function: [C@4e0efc
+[2019/06/06 21:41:47][INFO][queryCheckEmail]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT salt AS salt FROM users WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:41:47][INFO][queryCheckEmail]  Query succeed.
+[2019/06/06 21:41:47][INFO][queryCheckEmail]  Get salt: c6bf191d
+[2019/06/06 21:41:47][INFO][IMDLogin]  Get Salt: c6bf191d
+[2019/06/06 21:41:47][INFO][emailAndPassCheck]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM users WHERE email = 'sunzexi9920@gmail.com' AND pword = '01290f68a1131c69e996f7c025b0461f27dc6a2535d9c9fe691d5b8880116e3a1bccdf3ace838fd5a16176053e557e90c26e9cfe82ab6aca9e527be70ef04b67'
+[2019/06/06 21:41:47][INFO][emailAndPassCheck]  Query succeed.
+[2019/06/06 21:41:47][INFO][emailAndPassCheck]  Get num: 1
+[2019/06/06 21:41:47][INFO][IMDLogin]  Login Success!
+[2019/06/06 21:41:47][INFO][vertifyExistingSession]  Trying query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND status = 1
+[2019/06/06 21:41:47][INFO][vertifyExistingSession]  Query succeess.
+[2019/06/06 21:41:47][INFO][vertifyExistingSession]  Get num: 1
+[2019/06/06 21:41:47][INFO][alterStatusSession]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET status = 4 WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:41:47][INFO][alterStatusSession]  Updating Query...
+[2019/06/06 21:41:47][INFO][insertNewStatus]  Trying Querycom.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO sessions(email, sessionID, timeCreated, lastUsed, exprTime, status)VALUES('sunzexi9920@gmail.com', '13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2', '2019-06-06 21:41:47.834', '2019-06-06 21:41:47.834', '2019-06-07 02:41:47.834', 1)
+[2019/06/06 21:41:53][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:41:53][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2"}
+[2019/06/06 21:41:53][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:41:53][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:41:53][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:41:53][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:41:53][INFO][findUsersAndSessionID]  Find num: 6
+[2019/06/06 21:41:53][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:41:53][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2' 
+[2019/06/06 21:41:53][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:41:53][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = '13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2'
+[2019/06/06 21:41:53][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:41:53][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:41:48.0
+[2019/06/06 21:41:53][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:41:48.0
+[2019/06/06 21:41:53][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:41:53.47' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2'
+[2019/06/06 21:41:53][INFO][updateStatusAndTimestamp]  SessionID: 13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2 ACTIVE
+[2019/06/06 21:41:53][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:41:57][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:41:57][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2"}
+[2019/06/06 21:41:57][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:41:57][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:41:57][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:41:57][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:41:57][INFO][findUsersAndSessionID]  Find num: 6
+[2019/06/06 21:41:57][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:41:57][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2' 
+[2019/06/06 21:41:57][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:41:57][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = '13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2'
+[2019/06/06 21:41:57][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:41:57][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:41:53.0
+[2019/06/06 21:41:57][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:41:48.0
+[2019/06/06 21:41:57][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:41:57.719' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2'
+[2019/06/06 21:41:57][INFO][updateStatusAndTimestamp]  SessionID: 13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2 ACTIVE
+[2019/06/06 21:41:57][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:42:04][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:42:04][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2"}
+[2019/06/06 21:42:04][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:42:04][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:42:04][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:42:04][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:42:04][INFO][findUsersAndSessionID]  Find num: 6
+[2019/06/06 21:42:04][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:42:04][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2' 
+[2019/06/06 21:42:04][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:42:04][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = '13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2'
+[2019/06/06 21:42:04][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:42:04][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:41:58.0
+[2019/06/06 21:42:04][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:41:48.0
+[2019/06/06 21:42:04][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:42:04.413' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2'
+[2019/06/06 21:42:04][INFO][updateStatusAndTimestamp]  SessionID: 13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2 ACTIVE
+[2019/06/06 21:42:04][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:42:14][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:42:14][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2"}
+[2019/06/06 21:42:14][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:42:14][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:42:14][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:42:14][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:42:14][INFO][findUsersAndSessionID]  Find num: 6
+[2019/06/06 21:42:14][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:42:14][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2' 
+[2019/06/06 21:42:15][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:42:15][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = '13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2'
+[2019/06/06 21:42:15][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:42:15][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:42:04.0
+[2019/06/06 21:42:15][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:41:48.0
+[2019/06/06 21:42:15][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:42:15.006' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2'
+[2019/06/06 21:42:15][INFO][updateStatusAndTimestamp]  SessionID: 13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2 ACTIVE
+[2019/06/06 21:42:15][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:42:15][INFO][verifyPrivilegePage]  Received User and Password
+[2019/06/06 21:42:15][INFO][verifyPrivilegePage]  Request:
+{"email":"sunzexi9920@gmail.com","plevel":3}
+[2019/06/06 21:42:15][INFO][getPrivilegeLevel]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel AS plevel FROM users WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:42:19][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:42:19][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2"}
+[2019/06/06 21:42:19][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:42:19][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:42:19][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:42:19][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:42:19][INFO][findUsersAndSessionID]  Find num: 6
+[2019/06/06 21:42:19][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:42:19][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2' 
+[2019/06/06 21:42:20][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:42:20][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = '13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2'
+[2019/06/06 21:42:20][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:42:20][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:42:15.0
+[2019/06/06 21:42:20][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:41:48.0
+[2019/06/06 21:42:20][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:42:20.029' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2'
+[2019/06/06 21:42:20][INFO][updateStatusAndTimestamp]  SessionID: 13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2 ACTIVE
+[2019/06/06 21:42:20][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:42:20][INFO][verifyPrivilegePage]  Received User and Password
+[2019/06/06 21:42:20][INFO][verifyPrivilegePage]  Request:
+{"email":"sunzexi9920@gmail.com","plevel":4}
+[2019/06/06 21:42:20][INFO][getPrivilegeLevel]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel AS plevel FROM users WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:42:25][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:42:25][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2"}
+[2019/06/06 21:42:25][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:42:25][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:42:25][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:42:25][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:42:25][INFO][findUsersAndSessionID]  Find num: 6
+[2019/06/06 21:42:25][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:42:25][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2' 
+[2019/06/06 21:42:25][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:42:25][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = '13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2'
+[2019/06/06 21:42:25][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:42:25][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:42:20.0
+[2019/06/06 21:42:25][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:41:48.0
+[2019/06/06 21:42:25][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:42:25.301' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2'
+[2019/06/06 21:42:25][INFO][updateStatusAndTimestamp]  SessionID: 13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2 ACTIVE
+[2019/06/06 21:42:25][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:42:30][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:42:30][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2"}
+[2019/06/06 21:42:30][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:42:30][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:42:30][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:42:30][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:42:30][INFO][findUsersAndSessionID]  Find num: 6
+[2019/06/06 21:42:30][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:42:30][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2' 
+[2019/06/06 21:42:30][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:42:30][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = '13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2'
+[2019/06/06 21:42:30][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:42:30][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:42:25.0
+[2019/06/06 21:42:30][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:41:48.0
+[2019/06/06 21:42:30][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:42:30.196' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2'
+[2019/06/06 21:42:30][INFO][updateStatusAndTimestamp]  SessionID: 13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2 ACTIVE
+[2019/06/06 21:42:30][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:42:34][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:42:34][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2"}
+[2019/06/06 21:42:34][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:42:34][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:42:34][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:42:34][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:42:34][INFO][findUsersAndSessionID]  Find num: 6
+[2019/06/06 21:42:34][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:42:34][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2' 
+[2019/06/06 21:42:34][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:42:34][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = '13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2'
+[2019/06/06 21:42:34][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:42:34][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:42:30.0
+[2019/06/06 21:42:34][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:41:48.0
+[2019/06/06 21:42:34][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:42:34.923' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2'
+[2019/06/06 21:42:35][INFO][updateStatusAndTimestamp]  SessionID: 13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2 ACTIVE
+[2019/06/06 21:42:35][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:42:42][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:42:42][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2"}
+[2019/06/06 21:42:42][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:42:42][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:42:42][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:42:42][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:42:42][INFO][findUsersAndSessionID]  Find num: 6
+[2019/06/06 21:42:42][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:42:42][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2' 
+[2019/06/06 21:42:42][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:42:42][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = '13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2'
+[2019/06/06 21:42:42][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:42:42][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:42:35.0
+[2019/06/06 21:42:42][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:41:48.0
+[2019/06/06 21:42:42][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:42:42.116' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = '13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2'
+[2019/06/06 21:42:42][INFO][updateStatusAndTimestamp]  SessionID: 13038e9a42380f7ca4da9212b0d2f4d25f8dca98c96f28e257169ceb9e0a160a87491b50b3f7d30d32e6a448959eca3a5650230e3f95a818fddc582d75a121e2 ACTIVE
+[2019/06/06 21:42:42][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:45:13][INFO][IMDLogin]  Received User and Password
+[2019/06/06 21:45:13][INFO][IMDLogin]  Request:
+{"email":"sunzexi9920@gmail.com","password":"SZX920405szx!"}
+[2019/06/06 21:45:13][INFO][queryCheckEmail]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM users WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:45:13][INFO][queryCheckEmail]  Query succeed.
+[2019/06/06 21:45:13][INFO][queryCheckEmail]  Get num: 1
+[2019/06/06 21:45:13][INFO][getPassword]  GETPASSWORD Function: [C@6456fe3e
+[2019/06/06 21:45:13][INFO][queryCheckEmail]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT salt AS salt FROM users WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:45:13][INFO][queryCheckEmail]  Query succeed.
+[2019/06/06 21:45:13][INFO][queryCheckEmail]  Get salt: c6bf191d
+[2019/06/06 21:45:13][INFO][IMDLogin]  Get Salt: c6bf191d
+[2019/06/06 21:45:13][INFO][emailAndPassCheck]  Trying querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM users WHERE email = 'sunzexi9920@gmail.com' AND pword = '01290f68a1131c69e996f7c025b0461f27dc6a2535d9c9fe691d5b8880116e3a1bccdf3ace838fd5a16176053e557e90c26e9cfe82ab6aca9e527be70ef04b67'
+[2019/06/06 21:45:13][INFO][emailAndPassCheck]  Query succeed.
+[2019/06/06 21:45:13][INFO][emailAndPassCheck]  Get num: 1
+[2019/06/06 21:45:13][INFO][IMDLogin]  Login Success!
+[2019/06/06 21:45:13][INFO][vertifyExistingSession]  Trying query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND status = 1
+[2019/06/06 21:45:13][INFO][vertifyExistingSession]  Query succeess.
+[2019/06/06 21:45:13][INFO][vertifyExistingSession]  Get num: 1
+[2019/06/06 21:45:13][INFO][alterStatusSession]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET status = 4 WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:45:13][INFO][alterStatusSession]  Updating Query...
+[2019/06/06 21:45:13][INFO][insertNewStatus]  Trying Querycom.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO sessions(email, sessionID, timeCreated, lastUsed, exprTime, status)VALUES('sunzexi9920@gmail.com', 'f99980f7eadb5ec0dca88a9671feee3f0a6affdb0e24010609501b1fe2e6d669e6f60a78f7d2d189cf5d4a88ee3d239f1b67a03146a99bc5b873039cecff9c61', '2019-06-06 21:45:13.734', '2019-06-06 21:45:13.734', '2019-06-07 02:45:13.734', 1)
+[2019/06/06 21:45:20][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:45:20][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"f99980f7eadb5ec0dca88a9671feee3f0a6affdb0e24010609501b1fe2e6d669e6f60a78f7d2d189cf5d4a88ee3d239f1b67a03146a99bc5b873039cecff9c61"}
+[2019/06/06 21:45:20][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:45:20][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:45:20][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:45:20][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:45:20][INFO][findUsersAndSessionID]  Find num: 7
+[2019/06/06 21:45:20][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:45:20][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = 'f99980f7eadb5ec0dca88a9671feee3f0a6affdb0e24010609501b1fe2e6d669e6f60a78f7d2d189cf5d4a88ee3d239f1b67a03146a99bc5b873039cecff9c61' 
+[2019/06/06 21:45:20][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:45:20][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = 'f99980f7eadb5ec0dca88a9671feee3f0a6affdb0e24010609501b1fe2e6d669e6f60a78f7d2d189cf5d4a88ee3d239f1b67a03146a99bc5b873039cecff9c61'
+[2019/06/06 21:45:20][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:45:20][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:45:14.0
+[2019/06/06 21:45:20][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:45:14.0
+[2019/06/06 21:45:20][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:45:20.682' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = 'f99980f7eadb5ec0dca88a9671feee3f0a6affdb0e24010609501b1fe2e6d669e6f60a78f7d2d189cf5d4a88ee3d239f1b67a03146a99bc5b873039cecff9c61'
+[2019/06/06 21:45:20][INFO][updateStatusAndTimestamp]  SessionID: f99980f7eadb5ec0dca88a9671feee3f0a6affdb0e24010609501b1fe2e6d669e6f60a78f7d2d189cf5d4a88ee3d239f1b67a03146a99bc5b873039cecff9c61 ACTIVE
+[2019/06/06 21:45:20][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:45:29][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:45:29][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"f99980f7eadb5ec0dca88a9671feee3f0a6affdb0e24010609501b1fe2e6d669e6f60a78f7d2d189cf5d4a88ee3d239f1b67a03146a99bc5b873039cecff9c61"}
+[2019/06/06 21:45:29][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:45:29][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:45:29][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:45:29][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:45:29][INFO][findUsersAndSessionID]  Find num: 7
+[2019/06/06 21:45:29][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:45:29][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = 'f99980f7eadb5ec0dca88a9671feee3f0a6affdb0e24010609501b1fe2e6d669e6f60a78f7d2d189cf5d4a88ee3d239f1b67a03146a99bc5b873039cecff9c61' 
+[2019/06/06 21:45:29][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:45:29][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = 'f99980f7eadb5ec0dca88a9671feee3f0a6affdb0e24010609501b1fe2e6d669e6f60a78f7d2d189cf5d4a88ee3d239f1b67a03146a99bc5b873039cecff9c61'
+[2019/06/06 21:45:30][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:45:30][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:45:21.0
+[2019/06/06 21:45:30][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:45:14.0
+[2019/06/06 21:45:30][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:45:29.998' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = 'f99980f7eadb5ec0dca88a9671feee3f0a6affdb0e24010609501b1fe2e6d669e6f60a78f7d2d189cf5d4a88ee3d239f1b67a03146a99bc5b873039cecff9c61'
+[2019/06/06 21:45:30][INFO][updateStatusAndTimestamp]  SessionID: f99980f7eadb5ec0dca88a9671feee3f0a6affdb0e24010609501b1fe2e6d669e6f60a78f7d2d189cf5d4a88ee3d239f1b67a03146a99bc5b873039cecff9c61 ACTIVE
+[2019/06/06 21:45:30][INFO][IMDVerifySession]  Get Status: 1
+[2019/06/06 21:45:34][INFO][IMDVerifySession]  Received User and Password
+[2019/06/06 21:45:34][INFO][IMDVerifySession]  Request:
+{"email":"sunzexi9920@gmail.com","sessionID":"f99980f7eadb5ec0dca88a9671feee3f0a6affdb0e24010609501b1fe2e6d669e6f60a78f7d2d189cf5d4a88ee3d239f1b67a03146a99bc5b873039cecff9c61"}
+[2019/06/06 21:45:34][INFO][IMDVerifySession]  Line 41
+[2019/06/06 21:45:34][INFO][IMDVerifySession]  Get Email: sunzexi9920@gmail.com
+[2019/06/06 21:45:34][INFO][findUsersAndSessionID]  Trying Query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/06 21:45:35][INFO][findUsersAndSessionID]  Query succeed.
+[2019/06/06 21:45:35][INFO][findUsersAndSessionID]  Find num: 7
+[2019/06/06 21:45:35][INFO][findUsersAndSessionID]  Find Users... Verifying session
+[2019/06/06 21:45:35][INFO][findUsersAndSessionID]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT count(*) AS num FROM sessions WHERE email = 'sunzexi9920@gmail.com' AND sessionID = 'f99980f7eadb5ec0dca88a9671feee3f0a6affdb0e24010609501b1fe2e6d669e6f60a78f7d2d189cf5d4a88ee3d239f1b67a03146a99bc5b873039cecff9c61' 
+[2019/06/06 21:45:35][INFO][findUsersAndSessionID]  Query Succeed.
+[2019/06/06 21:45:35][INFO][updateStatusAndTimestamp]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT status AS status, lastUsed, exprTime FROM sessions WHERE sessionID = 'f99980f7eadb5ec0dca88a9671feee3f0a6affdb0e24010609501b1fe2e6d669e6f60a78f7d2d189cf5d4a88ee3d239f1b67a03146a99bc5b873039cecff9c61'
+[2019/06/06 21:45:35][INFO][updateStatusAndTimestamp]  Query Succeed
+[2019/06/06 21:45:35][INFO][updateStatusAndTimestamp]  Get lastUsed: 2019-06-06 21:45:30.0
+[2019/06/06 21:45:35][INFO][updateStatusAndTimestamp]  Get Expr: 2019-06-07 02:45:14.0
+[2019/06/06 21:45:35][INFO][updateStatusAndTimestamp]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-06 21:45:35.058' WHERE email = 'sunzexi9920@gmail.com' AND sessionID = 'f99980f7eadb5ec0dca88a9671feee3f0a6affdb0e24010609501b1fe2e6d669e6f60a78f7d2d189cf5d4a88ee3d239f1b67a03146a99bc5b873039cecff9c61'
+[2019/06/06 21:45:35][INFO][updateStatusAndTimestamp]  SessionID: f99980f7eadb5ec0dca88a9671feee3f0a6affdb0e24010609501b1fe2e6d669e6f60a78f7d2d189cf5d4a88ee3d239f1b67a03146a99bc5b873039cecff9c61 ACTIVE
+[2019/06/06 21:45:35][INFO][IMDVerifySession]  Get Status: 1
