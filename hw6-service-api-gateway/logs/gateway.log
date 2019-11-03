@@ -1,0 +1,311 @@
+[2019/06/04 00:38:42][CONFIG][initLogger]  [32mLogging initialized.[0m
+[2019/06/04 00:38:42][CONFIG][initService]  Starting service...
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  Scheme: http://
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  Hostname: 0.0.0.0
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  Port: 6211
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  Path: /api/g
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  Logger output directory: ./logs/
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  Logger output file: gateway.log
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  Database hostname: columbo-v5.ics.uci.edu
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  Database port: 3306
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  Database username: cs122b_db134
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  Database password provided? true
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  Database name: cs122b_db134
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  Database driver: com.mysql.cj.jdbc.Driver
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  Database connection settings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [IDM] scheme: http://
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [IDM] hostname: 0.0.0.0
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [IDM] port: 6243
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [IDM] path: /api/idm
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [IDM][EP] Register User: /register
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [IDM][EP] Login User: /login
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [IDM][EP] Verify Session: /session
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [IDM][EP] Verify User Privilege: /privilege
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Movies] scheme: http://
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Movies] hostname: 0.0.0.0
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Movies] port: 6241
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Movies] path: /api/movies
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Movies][EP] Search Movie: /search
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Movies][EP] Get Movie: /get/
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Movies][EP] Add Movie: /add
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Movies][EP] Delete Movie: /delete/
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Movies][EP] Get All Genres: /genre
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Movies][EP] Add Genre: /add
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Movies][EP] Get All Genres For Movie: /genre/
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Movies][EP] Search Star: /star/search
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Movies][EP] Get Star: /star/
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Movies][EP] Add Star to Movie: /star/starsin
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Movies][EP] Update Movie Rating: /rating
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Billing] scheme: http://
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Billing] hostname: 0.0.0.0
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Billing] port: 6543
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Billing] path: /api/billing
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Billing][EP] Update Cart: /cart/update
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Billing][EP] Delete Cart: /cart/delete
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Billing][EP] Retrieve Cart: /cart/retrieve
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Billing][EP] Clear Cart: /cart/clear
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Billing][EP] Insert Credit Card: /creditcard/insert
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Billing][EP] Update Credit Card: /creditcard/update
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Billing][EP] Delete Credit Card: /creditcard/delete
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Billing][EP] Retrieve Credit Card: /creditcard/retrieve
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Billing][EP] Insert Customer: /customer/insert
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Billing][EP] Update Customer: /creditcard/update
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Billing][EP] Retrieve Customer: /creditcard/retrieve
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Billing][EP] Place Order: /order/place
+[2019/06/04 00:38:42][CONFIG][currentConfigs]  [Billing][EP] Retrieve Order: /order/retrieve
+[2019/06/04 00:38:42][CONFIG][initConnectionPool]  Initializing connection pool...
+[2019/06/04 00:38:43][CONFIG][initConnectionPool]  [32mConnection pool initialized.[0m
+[2019/06/04 00:38:43][CONFIG][initThreadPool]  Initializing thread pool.
+[2019/06/04 00:38:43][CONFIG][initThreadPool]  [32mInitializing thread pool.[0m
+[2019/06/04 00:38:43][CONFIG][initHTTPServer]  Initializing HTTP server...
+[2019/06/04 00:38:43][CONFIG][initHTTPServer]  Building URI from configs...
+[2019/06/04 00:38:43][CONFIG][initHTTPServer]  Final URI: http://0.0.0.0:6211/api/g
+[2019/06/04 00:38:43][CONFIG][initHTTPServer]  Set Jersey resources.
+[2019/06/04 00:38:43][CONFIG][initHTTPServer]  Set Jackson as serializer.
+[2019/06/04 00:38:43][CONFIG][initHTTPServer]  Starting HTTP server...
+[2019/06/04 00:38:44][CONFIG][initHTTPServer]  [32mHTTP server started.[0m
+[2019/06/04 00:38:44][CONFIG][initService]  [32mService initialized.[0m
+[2019/06/04 00:40:57][INFO][loginUserRequest]  Recevied request to loginUser Request.
+[2019/06/04 00:40:57][INFO][verifyModel]  Verifying model format...
+[2019/06/04 00:40:57][INFO][verifyModel]  Attempting to deserialize JSON to POJO
+[2019/06/04 00:40:57][INFO][verifyModel]  Successfully deserialized JSON to POJO
+[2019/06/04 00:40:57][INFO][verifyModel]  Model has been validated.
+[2019/06/04 00:40:58][INFO][process]  Recevied status: 200
+[2019/06/04 00:40:58][INFO][process]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses (transactionid, email, sessionid, response, httpstatus) VALUES ('53d7b282f7b4e2056b42abb0fa427c4e814c584cf115f2e97399517af94e5fd6d0da163f4e1f979c76482884a61fba4a03b1483d19f288f170642d03442e2368', 'sunzexi9920@gmail.com', null, '{"resultCode":120,"message":"User logged in successfully.","sessionID":"d026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55"}', 200)
+[2019/06/04 00:40:58][INFO][process]  Query Succeed
+[2019/06/04 00:40:59][INFO][apiGateway]  Received request for HTTP response.
+[2019/06/04 00:40:59][INFO][apiGateway]  TransactionID: 53d7b282f7b4e2056b42abb0fa427c4e814c584cf115f2e97399517af94e5fd6d0da163f4e1f979c76482884a61fba4a03b1483d19f288f170642d03442e2368
+[2019/06/04 00:40:59][INFO][apiGateway]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT response, httpstatus FROM responses WHERE transactionid = '53d7b282f7b4e2056b42abb0fa427c4e814c584cf115f2e97399517af94e5fd6d0da163f4e1f979c76482884a61fba4a03b1483d19f288f170642d03442e2368'
+[2019/06/04 00:40:59][INFO][apiGateway]  Return httpstatus: 200
+[2019/06/04 00:41:11][INFO][searchMovieRequest]  Recevied request to Search Movie
+[2019/06/04 00:41:11][INFO][VerifySession]  Verifying Session with IDM...
+[2019/06/04 00:41:11][INFO][VerifySession]  Recevied status
+[2019/06/04 00:41:11][INFO][VerifySession]  JsonText: {"resultCode":130,"sessionID":"d026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55","message":"Session is active."}
+[2019/06/04 00:41:11][INFO][searchMovieRequest]  EndPoint: /search?
+[2019/06/04 00:41:11][INFO][searchMovieRequest]  Query: title=The%20Dark
+[2019/06/04 00:41:11][INFO][process]  GET METHOD URI: http://0.0.0.0:6241/api/movies/search?title=The%20Dark
+[2019/06/04 00:41:11][INFO][process]  email: sunzexi9920@gmail.com
+[2019/06/04 00:41:11][INFO][process]  sessionID: d026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55
+[2019/06/04 00:41:11][INFO][process]  transactionID: c19f8498a9075539ab541b08024e042460839b26a1930cd89ae698733873984b2cfe5037a7a88a83e0fe6ed5e08e418a50877ec3703274cfda5296d1fc28e034
+[2019/06/04 00:41:11][INFO][process]  GET Method
+[2019/06/04 00:41:11][INFO][process]  Recevied status: 200
+[2019/06/04 00:41:11][INFO][process]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses (transactionid, email, sessionid, response, httpstatus) VALUES ('c19f8498a9075539ab541b08024e042460839b26a1930cd89ae698733873984b2cfe5037a7a88a83e0fe6ed5e08e418a50877ec3703274cfda5296d1fc28e034', 'sunzexi9920@gmail.com', 'd026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55', '{"resultCode":210,"movies":[{"movieId":"tt0215244","title":"Terror in the Darkness","director":"Yolanda Darnell","year":2003,"rating":3.0,"numVotes":7},{"movieId":"tt0290233","title":"A Light in the Darkness","director":"Marshall E. Uzzle","year":2002,"rating":6.0,"numVotes":45},{"movieId":"tt0323965","title":"Shot in the Dark","director":"Adrian Grenier","year":2002,"rating":7.2,"numVotes":302},{"movieId":"tt0369226","title":"Alone in the Dark","director":"Uwe Boll","year":2005,"rating":2.3,"numVotes":39003},{"movieId":"tt0411267","title":"The Dark","director":"John Fawcett","year":2005,"rating":5.4,"numVotes":9615},{"movieId":"tt0413053","title":"In the Darkness of the Night","director":"João Canijo","year":2004,"rating":6.9,"numVotes":456},{"movieId":"tt0424817","title":"The Dark Face of the Moon","director":"Biket Ilhan","year":2005,"rating":3.6,"numVotes":147},{"movieId":"tt0447918","title":"The Dark Sea","director":"Roberta Torre","year":2006,"rating":4.6,"numVotes":144},{"movieId":"tt0456069","title":"In the Dark","director":"Marc Cinquanta","year":2004,"rating":3.6,"numVotes":100},{"movieId":"tt0468569","title":"The Dark Knight","director":"Christopher Nolan","year":2008,"rating":9.0,"numVotes":1855106}],"message":"Found movies with search parameters."}', 200)
+[2019/06/04 00:41:11][INFO][process]  Query Succeed
+[2019/06/04 00:41:13][INFO][apiGateway]  Received request for HTTP response.
+[2019/06/04 00:41:13][INFO][apiGateway]  TransactionID: c19f8498a9075539ab541b08024e042460839b26a1930cd89ae698733873984b2cfe5037a7a88a83e0fe6ed5e08e418a50877ec3703274cfda5296d1fc28e034
+[2019/06/04 00:41:13][INFO][apiGateway]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT response, httpstatus FROM responses WHERE transactionid = 'c19f8498a9075539ab541b08024e042460839b26a1930cd89ae698733873984b2cfe5037a7a88a83e0fe6ed5e08e418a50877ec3703274cfda5296d1fc28e034'
+[2019/06/04 00:41:13][INFO][apiGateway]  Return httpstatus: 200
+[2019/06/04 00:41:17][INFO][getMovieRequest]  printHeader
+[2019/06/04 00:41:17][INFO][printHeader]  email: sunzexi9920@gmail.com
+[2019/06/04 00:41:17][INFO][printHeader]  sessionID: d026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55
+[2019/06/04 00:41:17][INFO][printHeader]  transactionID: e4e5f442b798eec25c02b0afb5996969a71d4a909a35148bb4632055936a936506aeac2cb066bfd675f9cc305d4de168d5251d06bbb9bdea149ad04912c56087
+[2019/06/04 00:41:17][INFO][VerifySession]  Verifying Session with IDM...
+[2019/06/04 00:41:17][INFO][VerifySession]  Recevied status
+[2019/06/04 00:41:17][INFO][VerifySession]  JsonText: {"resultCode":130,"sessionID":"d026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55","message":"Session is active."}
+[2019/06/04 00:41:17][INFO][getMovieRequest]  GET Movie using path: /get/
+[2019/06/04 00:41:17][INFO][process]  GET METHOD URI: http://0.0.0.0:6241/api/movies/get/tt0290233
+[2019/06/04 00:41:17][INFO][process]  email: sunzexi9920@gmail.com
+[2019/06/04 00:41:17][INFO][process]  sessionID: d026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55
+[2019/06/04 00:41:17][INFO][process]  transactionID: e4e5f442b798eec25c02b0afb5996969a71d4a909a35148bb4632055936a936506aeac2cb066bfd675f9cc305d4de168d5251d06bbb9bdea149ad04912c56087
+[2019/06/04 00:41:17][INFO][process]  GET Method
+[2019/06/04 00:41:18][INFO][process]  Recevied status: 200
+[2019/06/04 00:41:18][INFO][process]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses (transactionid, email, sessionid, response, httpstatus) VALUES ('e4e5f442b798eec25c02b0afb5996969a71d4a909a35148bb4632055936a936506aeac2cb066bfd675f9cc305d4de168d5251d06bbb9bdea149ad04912c56087', 'sunzexi9920@gmail.com', 'd026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55', '{"resultCode":210,"movie":{"movieId":"tt0290233","title":"A Light in the Darkness","director":"Marshall E. Uzzle","year":2002,"rating":6.0,"numVotes":45,"budget":0,"overview":"Joseph just broke up with his girlfriend and is not taking it very well. He thinks she is plotting against him with their mutual psychiatrist.","revnue":0,"genres":"[{id: 13, name: Horror},{id: 9, name: Drama}]","stars":"[{id: nm0000947, name: Karen Black},{id: nm0004752, name: Troy Byer},{id: nm0058458, name: Carl Bartels},{id: nm0856182, name: Matt Terzian},{id: nm0882740, name: Marshall E. Uzzle},{id: nm0934569, name: Troy Winbush},{id: nm0947053, name: Steve Yeaman},{id: nm1024698, name: Philip LaLonde},{id: nm1025496, name: Sibyl Wickersheimer},{id: nm1025793, name: David Avery}]","revenue":0},"message":"Found movies with search parameters."}', 200)
+[2019/06/04 00:41:18][INFO][process]  Query Succeed
+[2019/06/04 00:41:19][INFO][apiGateway]  Received request for HTTP response.
+[2019/06/04 00:41:19][INFO][apiGateway]  TransactionID: e4e5f442b798eec25c02b0afb5996969a71d4a909a35148bb4632055936a936506aeac2cb066bfd675f9cc305d4de168d5251d06bbb9bdea149ad04912c56087
+[2019/06/04 00:41:19][INFO][apiGateway]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT response, httpstatus FROM responses WHERE transactionid = 'e4e5f442b798eec25c02b0afb5996969a71d4a909a35148bb4632055936a936506aeac2cb066bfd675f9cc305d4de168d5251d06bbb9bdea149ad04912c56087'
+[2019/06/04 00:41:19][INFO][apiGateway]  Return httpstatus: 200
+[2019/06/04 00:41:30][INFO][VerifySession]  Verifying Session with IDM...
+[2019/06/04 00:41:30][INFO][VerifySession]  Recevied status
+[2019/06/04 00:41:30][INFO][VerifySession]  JsonText: {"resultCode":130,"sessionID":"d026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55","message":"Session is active."}
+[2019/06/04 00:41:30][INFO][verifyModel]  Verifying model format...
+[2019/06/04 00:41:30][INFO][verifyModel]  Attempting to deserialize JSON to POJO
+[2019/06/04 00:41:30][INFO][verifyModel]  Successfully deserialized JSON to POJO
+[2019/06/04 00:41:30][INFO][verifyModel]  Model has been validated.
+[2019/06/04 00:41:30][INFO][updateRatingRequest]  Rating Endpoint URI: /rating
+[2019/06/04 00:41:31][INFO][process]  Recevied status: 200
+[2019/06/04 00:41:31][INFO][process]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses (transactionid, email, sessionid, response, httpstatus) VALUES ('a80409839687355a31147fbe8ca572a1ef5bab912e78a69b8f86f00e96fd222b8d9be1884c0dc9a99b1bd56c242146e53e257c9c2742244c7882d2b2e019acf0', 'sunzexi9920@gmail.com', 'd026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55', '{"resultCode":250,"message":"Rating successfully updated."}', 200)
+[2019/06/04 00:41:31][INFO][process]  Query Succeed
+[2019/06/04 00:41:32][INFO][apiGateway]  Received request for HTTP response.
+[2019/06/04 00:41:32][INFO][apiGateway]  TransactionID: a80409839687355a31147fbe8ca572a1ef5bab912e78a69b8f86f00e96fd222b8d9be1884c0dc9a99b1bd56c242146e53e257c9c2742244c7882d2b2e019acf0
+[2019/06/04 00:41:32][INFO][apiGateway]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT response, httpstatus FROM responses WHERE transactionid = 'a80409839687355a31147fbe8ca572a1ef5bab912e78a69b8f86f00e96fd222b8d9be1884c0dc9a99b1bd56c242146e53e257c9c2742244c7882d2b2e019acf0'
+[2019/06/04 00:41:32][INFO][apiGateway]  Return httpstatus: 200
+[2019/06/04 00:41:36][INFO][VerifySession]  Verifying Session with IDM...
+[2019/06/04 00:41:36][INFO][VerifySession]  Recevied status
+[2019/06/04 00:41:36][INFO][VerifySession]  JsonText: {"resultCode":130,"sessionID":"d026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55","message":"Session is active."}
+[2019/06/04 00:41:36][INFO][insertToCartRequest]  Recevied request to cart insert
+[2019/06/04 00:41:36][INFO][verifyModel]  Verifying model format...
+[2019/06/04 00:41:36][INFO][verifyModel]  Attempting to deserialize JSON to POJO
+[2019/06/04 00:41:36][INFO][verifyModel]  Successfully deserialized JSON to POJO
+[2019/06/04 00:41:36][INFO][verifyModel]  Model has been validated.
+[2019/06/04 00:41:36][INFO][process]  Recevied status: 200
+[2019/06/04 00:41:37][INFO][process]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses (transactionid, email, sessionid, response, httpstatus) VALUES ('dddee2bb95e4d5a120f6301496b65562e1dc31e2e05cab11836705243b8051a8383834229fbae00cb06a3983b1de4186a972a69417985d6f73fb7d5e097b674b', 'sunzexi9920@gmail.com', 'd026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55', '{"resultCode":3100,"message":"Shopping cart item inserted successfully."}', 200)
+[2019/06/04 00:41:37][INFO][process]  Query Succeed
+[2019/06/04 00:41:38][INFO][apiGateway]  Received request for HTTP response.
+[2019/06/04 00:41:38][INFO][apiGateway]  TransactionID: dddee2bb95e4d5a120f6301496b65562e1dc31e2e05cab11836705243b8051a8383834229fbae00cb06a3983b1de4186a972a69417985d6f73fb7d5e097b674b
+[2019/06/04 00:41:38][INFO][apiGateway]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT response, httpstatus FROM responses WHERE transactionid = 'dddee2bb95e4d5a120f6301496b65562e1dc31e2e05cab11836705243b8051a8383834229fbae00cb06a3983b1de4186a972a69417985d6f73fb7d5e097b674b'
+[2019/06/04 00:41:38][INFO][apiGateway]  Return httpstatus: 200
+[2019/06/04 00:41:44][INFO][VerifySession]  Verifying Session with IDM...
+[2019/06/04 00:41:44][INFO][VerifySession]  Recevied status
+[2019/06/04 00:41:44][INFO][VerifySession]  JsonText: {"resultCode":130,"sessionID":"d026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55","message":"Session is active."}
+[2019/06/04 00:41:44][INFO][placeOrderRequest]  Recevied request to order place
+[2019/06/04 00:41:44][INFO][verifyModel]  Verifying model format...
+[2019/06/04 00:41:44][INFO][verifyModel]  Attempting to deserialize JSON to POJO
+[2019/06/04 00:41:44][INFO][verifyModel]  Successfully deserialized JSON to POJO
+[2019/06/04 00:41:44][INFO][verifyModel]  Model has been validated.
+[2019/06/04 00:41:46][INFO][apiGateway]  Received request for HTTP response.
+[2019/06/04 00:41:46][INFO][apiGateway]  TransactionID: 6b4a42baac1758f60d7c6ddc13f5f0339a921f3b8c6b41afc3505b06ac5b8ca8b8fbfab8ff00ea7d664ea905bc4f596082744aeecba9d381b26be15fb68b0c2e
+[2019/06/04 00:41:47][INFO][apiGateway]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT response, httpstatus FROM responses WHERE transactionid = '6b4a42baac1758f60d7c6ddc13f5f0339a921f3b8c6b41afc3505b06ac5b8ca8b8fbfab8ff00ea7d664ea905bc4f596082744aeecba9d381b26be15fb68b0c2e'
+[2019/06/04 00:41:47][INFO][apiGateway]  Returning response: OutboundJaxrsResponse{status=204, reason=No Content, hasEntity=false, closed=false, buffered=false}
+[2019/06/04 00:41:47][INFO][process]  Recevied status: 200
+[2019/06/04 00:41:47][INFO][process]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses (transactionid, email, sessionid, response, httpstatus) VALUES ('6b4a42baac1758f60d7c6ddc13f5f0339a921f3b8c6b41afc3505b06ac5b8ca8b8fbfab8ff00ea7d664ea905bc4f596082744aeecba9d381b26be15fb68b0c2e', 'sunzexi9920@gmail.com', 'd026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55', '{"resultCode":3400,"redirectURL":"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-0HS89666NT556793Y","token":"EC-0HS89666NT556793Y","message":"Order placed successfully."}', 200)
+[2019/06/04 00:41:47][INFO][process]  Query Succeed
+[2019/06/04 00:42:03][INFO][VerifySession]  Verifying Session with IDM...
+[2019/06/04 00:42:03][INFO][VerifySession]  Recevied status
+[2019/06/04 00:42:03][INFO][VerifySession]  JsonText: {"resultCode":130,"sessionID":"d026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55","message":"Session is active."}
+[2019/06/04 00:42:03][INFO][placeOrderRequest]  Recevied request to order place
+[2019/06/04 00:42:03][INFO][verifyModel]  Verifying model format...
+[2019/06/04 00:42:03][INFO][verifyModel]  Attempting to deserialize JSON to POJO
+[2019/06/04 00:42:03][INFO][verifyModel]  Successfully deserialized JSON to POJO
+[2019/06/04 00:42:03][INFO][verifyModel]  Model has been validated.
+[2019/06/04 00:42:03][INFO][process]  Recevied status: 200
+[2019/06/04 00:42:03][INFO][process]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses (transactionid, email, sessionid, response, httpstatus) VALUES ('cc3a2f1a54fde87aadf09aca5d79a9c44ce0fedb18b0d95cb449687457a0383632784df1435225ea3aaeb6cee7ee21952f670bbf597f26d0669a34573edefd11', 'sunzexi9920@gmail.com', 'd026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55', '{"resultCode":341,"message":"Shopping cart for this customer not found."}', 200)
+[2019/06/04 00:42:03][INFO][process]  Query Succeed
+[2019/06/04 00:42:05][INFO][VerifySession]  Verifying Session with IDM...
+[2019/06/04 00:42:05][INFO][apiGateway]  Received request for HTTP response.
+[2019/06/04 00:42:05][INFO][apiGateway]  TransactionID: cc3a2f1a54fde87aadf09aca5d79a9c44ce0fedb18b0d95cb449687457a0383632784df1435225ea3aaeb6cee7ee21952f670bbf597f26d0669a34573edefd11
+[2019/06/04 00:42:05][INFO][apiGateway]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT response, httpstatus FROM responses WHERE transactionid = 'cc3a2f1a54fde87aadf09aca5d79a9c44ce0fedb18b0d95cb449687457a0383632784df1435225ea3aaeb6cee7ee21952f670bbf597f26d0669a34573edefd11'
+[2019/06/04 00:42:05][INFO][apiGateway]  Return httpstatus: 200
+[2019/06/04 00:42:05][INFO][VerifySession]  Recevied status
+[2019/06/04 00:42:05][INFO][VerifySession]  JsonText: {"resultCode":130,"sessionID":"d026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55","message":"Session is active."}
+[2019/06/04 00:42:05][INFO][placeOrderRequest]  Recevied request to order place
+[2019/06/04 00:42:05][INFO][verifyModel]  Verifying model format...
+[2019/06/04 00:42:05][INFO][verifyModel]  Attempting to deserialize JSON to POJO
+[2019/06/04 00:42:05][INFO][verifyModel]  Successfully deserialized JSON to POJO
+[2019/06/04 00:42:05][INFO][verifyModel]  Model has been validated.
+[2019/06/04 00:42:05][INFO][process]  Recevied status: 200
+[2019/06/04 00:42:06][INFO][process]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses (transactionid, email, sessionid, response, httpstatus) VALUES ('b454ab012284239c297627d609db9fdd928fd74e13d9e0292884fc6945b40ac33c3a354181b405a3fb41978a438fa0e3ab803ebb9f7eb3c67b2290e823c3df1c', 'sunzexi9920@gmail.com', 'd026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55', '{"resultCode":341,"message":"Shopping cart for this customer not found."}', 200)
+[2019/06/04 00:42:06][INFO][process]  Query Succeed
+[2019/06/04 00:42:09][INFO][apiGateway]  Received request for HTTP response.
+[2019/06/04 00:42:09][INFO][apiGateway]  TransactionID: b454ab012284239c297627d609db9fdd928fd74e13d9e0292884fc6945b40ac33c3a354181b405a3fb41978a438fa0e3ab803ebb9f7eb3c67b2290e823c3df1c
+[2019/06/04 00:42:09][INFO][apiGateway]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT response, httpstatus FROM responses WHERE transactionid = 'b454ab012284239c297627d609db9fdd928fd74e13d9e0292884fc6945b40ac33c3a354181b405a3fb41978a438fa0e3ab803ebb9f7eb3c67b2290e823c3df1c'
+[2019/06/04 00:42:09][INFO][apiGateway]  Return httpstatus: 200
+[2019/06/04 00:42:12][INFO][VerifySession]  Verifying Session with IDM...
+[2019/06/04 00:42:13][INFO][VerifySession]  Recevied status
+[2019/06/04 00:42:13][INFO][VerifySession]  JsonText: {"resultCode":130,"sessionID":"d026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55","message":"Session is active."}
+[2019/06/04 00:42:13][INFO][insertToCartRequest]  Recevied request to cart insert
+[2019/06/04 00:42:13][INFO][verifyModel]  Verifying model format...
+[2019/06/04 00:42:13][INFO][verifyModel]  Attempting to deserialize JSON to POJO
+[2019/06/04 00:42:13][INFO][verifyModel]  Successfully deserialized JSON to POJO
+[2019/06/04 00:42:13][INFO][verifyModel]  Model has been validated.
+[2019/06/04 00:42:13][INFO][process]  Recevied status: 200
+[2019/06/04 00:42:13][INFO][process]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses (transactionid, email, sessionid, response, httpstatus) VALUES ('3c2b95c10b21220a2960ff418e452bb7e05b0dff2cf25344840b2d7b6688fc826bb7dc2f3c7ac4394a85267f59e483c06bd7d940971689135ac1adf763347c8b', 'sunzexi9920@gmail.com', 'd026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55', '{"resultCode":3100,"message":"Shopping cart item inserted successfully."}', 200)
+[2019/06/04 00:42:13][INFO][process]  Query Succeed
+[2019/06/04 00:42:15][INFO][apiGateway]  Received request for HTTP response.
+[2019/06/04 00:42:15][INFO][apiGateway]  TransactionID: 3c2b95c10b21220a2960ff418e452bb7e05b0dff2cf25344840b2d7b6688fc826bb7dc2f3c7ac4394a85267f59e483c06bd7d940971689135ac1adf763347c8b
+[2019/06/04 00:42:15][INFO][apiGateway]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT response, httpstatus FROM responses WHERE transactionid = '3c2b95c10b21220a2960ff418e452bb7e05b0dff2cf25344840b2d7b6688fc826bb7dc2f3c7ac4394a85267f59e483c06bd7d940971689135ac1adf763347c8b'
+[2019/06/04 00:42:15][INFO][apiGateway]  Return httpstatus: 200
+[2019/06/04 00:42:17][INFO][VerifySession]  Verifying Session with IDM...
+[2019/06/04 00:42:17][INFO][VerifySession]  Recevied status
+[2019/06/04 00:42:17][INFO][VerifySession]  JsonText: {"resultCode":130,"sessionID":"d026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55","message":"Session is active."}
+[2019/06/04 00:42:17][INFO][placeOrderRequest]  Recevied request to order place
+[2019/06/04 00:42:17][INFO][verifyModel]  Verifying model format...
+[2019/06/04 00:42:17][INFO][verifyModel]  Attempting to deserialize JSON to POJO
+[2019/06/04 00:42:17][INFO][verifyModel]  Successfully deserialized JSON to POJO
+[2019/06/04 00:42:17][INFO][verifyModel]  Model has been validated.
+[2019/06/04 00:42:19][INFO][process]  Recevied status: 200
+[2019/06/04 00:42:19][INFO][process]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses (transactionid, email, sessionid, response, httpstatus) VALUES ('136a2928d7d39e5bc089162a8be9c71c276a5e9f7b75ce5f9785a518fbb874ee93102dd280b1efd1a18be549fc24782cb6c796068b92a550286d81ef70ad57a0', 'sunzexi9920@gmail.com', 'd026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55', '{"resultCode":3400,"redirectURL":"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-2TY94916HE3549452","token":"EC-2TY94916HE3549452","message":"Order placed successfully."}', 200)
+[2019/06/04 00:42:19][INFO][process]  Query Succeed
+[2019/06/04 00:42:19][INFO][apiGateway]  Received request for HTTP response.
+[2019/06/04 00:42:19][INFO][apiGateway]  TransactionID: 136a2928d7d39e5bc089162a8be9c71c276a5e9f7b75ce5f9785a518fbb874ee93102dd280b1efd1a18be549fc24782cb6c796068b92a550286d81ef70ad57a0
+[2019/06/04 00:42:19][INFO][apiGateway]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT response, httpstatus FROM responses WHERE transactionid = '136a2928d7d39e5bc089162a8be9c71c276a5e9f7b75ce5f9785a518fbb874ee93102dd280b1efd1a18be549fc24782cb6c796068b92a550286d81ef70ad57a0'
+[2019/06/04 00:42:19][INFO][apiGateway]  Return httpstatus: 200
+[2019/06/04 00:42:52][INFO][VerifySession]  Verifying Session with IDM...
+[2019/06/04 00:42:52][INFO][VerifySession]  Recevied status
+[2019/06/04 00:42:52][INFO][VerifySession]  JsonText: {"resultCode":130,"sessionID":"d026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55","message":"Session is active."}
+[2019/06/04 00:42:52][INFO][retrieveOrderRequest]  Recevied request to order place
+[2019/06/04 00:42:52][INFO][verifyModel]  Verifying model format...
+[2019/06/04 00:42:52][INFO][verifyModel]  Attempting to deserialize JSON to POJO
+[2019/06/04 00:42:52][INFO][verifyModel]  Successfully deserialized JSON to POJO
+[2019/06/04 00:42:52][INFO][verifyModel]  Model has been validated.
+[2019/06/04 00:42:58][INFO][process]  Recevied status: 200
+[2019/06/04 00:42:58][INFO][apiGateway]  Received request for HTTP response.
+[2019/06/04 00:42:58][INFO][apiGateway]  TransactionID: 29bda19e39b0e2b36cee1dd6a5bf838a3a2d56d9a685bb42af1d7853d00157dfee4e9a7ccf9447004b364ce5ee0496bb589ca6631605030539237370dafd5022
+[2019/06/04 00:42:58][INFO][process]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses (transactionid, email, sessionid, response, httpstatus) VALUES ('29bda19e39b0e2b36cee1dd6a5bf838a3a2d56d9a685bb42af1d7853d00157dfee4e9a7ccf9447004b364ce5ee0496bb589ca6631605030539237370dafd5022', 'sunzexi9920@gmail.com', 'd026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55', '{"resultCode":3410,"transactions":[{"transactionId":"2UY286271E622853T","state":"completed","amount":{"total":"38.53","currency":"USD"},"transaction_fee":{"value":"1.42","currency":"USD"},"create_time":"2019-06-04T00:52:18Z","update_time":"2019-06-04T00:52:18Z","items":[{"email":"sunzexi9920@gmail.com","movieId":"tt0468569","quantity":6,"saleDate":"2019-06-03","unit_price":10.926,"discount":0.587686}]},{"transactionId":"6YK23695759760425","state":"completed","amount":{"total":"76.10","currency":"USD"},"transaction_fee":{"value":"2.51","currency":"USD"},"create_time":"2019-06-04T01:00:02Z","update_time":"2019-06-04T01:00:02Z","items":[{"email":"sunzexi9920@gmail.com","movieId":"tt0215244","quantity":6,"saleDate":"2019-06-03","unit_price":17.9116,"discount":0.708071}]},{"transactionId":"3C6861476X846614X","state":"completed","amount":{"total":"38.05","currency":"USD"},"transaction_fee":{"value":"1.40","currency":"USD"},"create_time":"2019-06-04T01:31:00Z","update_time":"2019-06-04T01:31:00Z","items":[{"email":"sunzexi9920@gmail.com","movieId":"tt0215244","quantity":3,"saleDate":"2019-06-03","unit_price":17.9116,"discount":0.708071}]},{"transactionId":"6NM80260VD778545E","state":"completed","amount":{"total":"38.05","currency":"USD"},"transaction_fee":{"value":"1.40","currency":"USD"},"create_time":"2019-06-04T01:34:16Z","update_time":"2019-06-04T01:34:16Z","items":[{"email":"sunzexi9920@gmail.com","movieId":"tt0215244","quantity":3,"saleDate":"2019-06-03","unit_price":17.9116,"discount":0.708071}]},{"transactionId":"24N9043630504290N","state":"completed","amount":{"total":"38.05","currency":"USD"},"transaction_fee":{"value":"1.40","currency":"USD"},"create_time":"2019-06-04T01:39:03Z","update_time":"2019-06-04T01:39:03Z","items":[{"email":"sunzexi9920@gmail.com","movieId":"tt0215244","quantity":3,"saleDate":"2019-06-03","unit_price":17.9116,"discount":0.708071}]},{"transactionId":"66D94758BR9356848","state":"completed","amount":{"total":"31.38","currency":"USD"},"transaction_fee":{"value":"1.21","currency":"USD"},"create_time":"2019-06-04T07:42:44Z","update_time":"2019-06-04T07:42:44Z","items":[{"email":"sunzexi9920@gmail.com","movieId":"tt0290233","quantity":3,"saleDate":"2019-06-04","unit_price":15.7497,"discount":0.664052}]}],"message":"Orders retrieved successfully."}', 200)
+[2019/06/04 00:42:58][INFO][process]  Query Succeed
+[2019/06/04 00:42:58][INFO][apiGateway]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT response, httpstatus FROM responses WHERE transactionid = '29bda19e39b0e2b36cee1dd6a5bf838a3a2d56d9a685bb42af1d7853d00157dfee4e9a7ccf9447004b364ce5ee0496bb589ca6631605030539237370dafd5022'
+[2019/06/04 00:42:58][INFO][apiGateway]  Return httpstatus: 200
+[2019/06/04 00:43:09][INFO][VerifySession]  Verifying Session with IDM...
+[2019/06/04 00:43:09][INFO][VerifySession]  Recevied status
+[2019/06/04 00:43:09][INFO][VerifySession]  JsonText: {"resultCode":130,"sessionID":"d026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55","message":"Session is active."}
+[2019/06/04 00:43:09][INFO][getGenresRequest]  Search Movie Endpoint URI: /genre
+[2019/06/04 00:43:09][INFO][process]  GET METHOD URI: http://0.0.0.0:6241/api/movies/genre
+[2019/06/04 00:43:09][INFO][process]  email: sunzexi9920@gmail.com
+[2019/06/04 00:43:09][INFO][process]  sessionID: d026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55
+[2019/06/04 00:43:09][INFO][process]  transactionID: 7f58d3c1c3d583c2e71f00681648c41a3dd0da6b7017ed71d4c8e0a5c0813c5b49a1a5853347f9ce892f53dd27cb2bd8bfc56d7212a64334a4cbabbf70d279dd
+[2019/06/04 00:43:09][INFO][process]  GET Method
+[2019/06/04 00:43:09][INFO][process]  Recevied status: 200
+[2019/06/04 00:43:09][INFO][process]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses (transactionid, email, sessionid, response, httpstatus) VALUES ('7f58d3c1c3d583c2e71f00681648c41a3dd0da6b7017ed71d4c8e0a5c0813c5b49a1a5853347f9ce892f53dd27cb2bd8bfc56d7212a64334a4cbabbf70d279dd', 'sunzexi9920@gmail.com', 'd026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55', '{"resultCode":219,"genres":[{"id":1,"name":"Action"},{"id":2,"name":"Adult"},{"id":3,"name":"Adventure"},{"id":4,"name":"Animation"},{"id":5,"name":"Biography"},{"id":6,"name":"Comedy"},{"id":7,"name":"Crime"},{"id":8,"name":"Documentary"},{"id":9,"name":"Drama"},{"id":10,"name":"Family"},{"id":11,"name":"Fantasy"},{"id":12,"name":"History"},{"id":13,"name":"Horror"},{"id":14,"name":"Music"},{"id":15,"name":"Musical"},{"id":16,"name":"Mystery"},{"id":17,"name":"Reality-TV"},{"id":18,"name":"Romance"},{"id":19,"name":"Sci-Fi"},{"id":20,"name":"Sport"},{"id":21,"name":"Thriller"},{"id":22,"name":"War"},{"id":23,"name":"Western"},{"id":24,"name":"newGenre"}],"message":"Genres successfully retrieved."}', 200)
+[2019/06/04 00:43:10][INFO][process]  Query Succeed
+[2019/06/04 00:43:11][INFO][apiGateway]  Received request for HTTP response.
+[2019/06/04 00:43:11][INFO][apiGateway]  TransactionID: 7f58d3c1c3d583c2e71f00681648c41a3dd0da6b7017ed71d4c8e0a5c0813c5b49a1a5853347f9ce892f53dd27cb2bd8bfc56d7212a64334a4cbabbf70d279dd
+[2019/06/04 00:43:11][INFO][apiGateway]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT response, httpstatus FROM responses WHERE transactionid = '7f58d3c1c3d583c2e71f00681648c41a3dd0da6b7017ed71d4c8e0a5c0813c5b49a1a5853347f9ce892f53dd27cb2bd8bfc56d7212a64334a4cbabbf70d279dd'
+[2019/06/04 00:43:11][INFO][apiGateway]  Return httpstatus: 200
+[2019/06/04 00:43:43][INFO][VerifySession]  Verifying Session with IDM...
+[2019/06/04 00:43:43][INFO][VerifySession]  Recevied status
+[2019/06/04 00:43:43][INFO][VerifySession]  JsonText: {"resultCode":130,"sessionID":"d026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55","message":"Session is active."}
+[2019/06/04 00:43:43][INFO][retrieveOrderRequest]  Recevied request to order place
+[2019/06/04 00:43:43][INFO][verifyModel]  Verifying model format...
+[2019/06/04 00:43:43][INFO][verifyModel]  Attempting to deserialize JSON to POJO
+[2019/06/04 00:43:43][INFO][verifyModel]  Successfully deserialized JSON to POJO
+[2019/06/04 00:43:43][INFO][verifyModel]  Model has been validated.
+[2019/06/04 00:43:48][INFO][process]  Recevied status: 200
+[2019/06/04 00:43:48][INFO][process]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses (transactionid, email, sessionid, response, httpstatus) VALUES ('bd1212dd52129641e4294527167d7b7031d63d95c8372a850fbae8a56f7ec9a04196fdfcd09a285a5207b43d50f03f5926ebcf06d00b3c9ac924d8cebbe95efe', 'sunzexi9920@gmail.com', 'd026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55', '{"resultCode":3410,"transactions":[{"transactionId":"2UY286271E622853T","state":"completed","amount":{"total":"38.53","currency":"USD"},"transaction_fee":{"value":"1.42","currency":"USD"},"create_time":"2019-06-04T00:52:18Z","update_time":"2019-06-04T00:52:18Z","items":[{"email":"sunzexi9920@gmail.com","movieId":"tt0468569","quantity":6,"saleDate":"2019-06-03","unit_price":10.926,"discount":0.587686}]},{"transactionId":"6YK23695759760425","state":"completed","amount":{"total":"76.10","currency":"USD"},"transaction_fee":{"value":"2.51","currency":"USD"},"create_time":"2019-06-04T01:00:02Z","update_time":"2019-06-04T01:00:02Z","items":[{"email":"sunzexi9920@gmail.com","movieId":"tt0215244","quantity":6,"saleDate":"2019-06-03","unit_price":17.9116,"discount":0.708071}]},{"transactionId":"3C6861476X846614X","state":"completed","amount":{"total":"38.05","currency":"USD"},"transaction_fee":{"value":"1.40","currency":"USD"},"create_time":"2019-06-04T01:31:00Z","update_time":"2019-06-04T01:31:00Z","items":[{"email":"sunzexi9920@gmail.com","movieId":"tt0215244","quantity":3,"saleDate":"2019-06-03","unit_price":17.9116,"discount":0.708071}]},{"transactionId":"6NM80260VD778545E","state":"completed","amount":{"total":"38.05","currency":"USD"},"transaction_fee":{"value":"1.40","currency":"USD"},"create_time":"2019-06-04T01:34:16Z","update_time":"2019-06-04T01:34:16Z","items":[{"email":"sunzexi9920@gmail.com","movieId":"tt0215244","quantity":3,"saleDate":"2019-06-03","unit_price":17.9116,"discount":0.708071}]},{"transactionId":"24N9043630504290N","state":"completed","amount":{"total":"38.05","currency":"USD"},"transaction_fee":{"value":"1.40","currency":"USD"},"create_time":"2019-06-04T01:39:03Z","update_time":"2019-06-04T01:39:03Z","items":[{"email":"sunzexi9920@gmail.com","movieId":"tt0215244","quantity":3,"saleDate":"2019-06-03","unit_price":17.9116,"discount":0.708071}]},{"transactionId":"66D94758BR9356848","state":"completed","amount":{"total":"31.38","currency":"USD"},"transaction_fee":{"value":"1.21","currency":"USD"},"create_time":"2019-06-04T07:42:44Z","update_time":"2019-06-04T07:42:44Z","items":[{"email":"sunzexi9920@gmail.com","movieId":"tt0290233","quantity":3,"saleDate":"2019-06-04","unit_price":15.7497,"discount":0.664052}]}],"message":"Orders retrieved successfully."}', 200)
+[2019/06/04 00:43:48][INFO][process]  Query Succeed
+[2019/06/04 00:43:49][INFO][apiGateway]  Received request for HTTP response.
+[2019/06/04 00:43:49][INFO][apiGateway]  TransactionID: bd1212dd52129641e4294527167d7b7031d63d95c8372a850fbae8a56f7ec9a04196fdfcd09a285a5207b43d50f03f5926ebcf06d00b3c9ac924d8cebbe95efe
+[2019/06/04 00:43:49][INFO][apiGateway]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT response, httpstatus FROM responses WHERE transactionid = 'bd1212dd52129641e4294527167d7b7031d63d95c8372a850fbae8a56f7ec9a04196fdfcd09a285a5207b43d50f03f5926ebcf06d00b3c9ac924d8cebbe95efe'
+[2019/06/04 00:43:49][INFO][apiGateway]  Return httpstatus: 200
+[2019/06/04 00:44:07][INFO][registerUserRequest]  Received request to register user.
+[2019/06/04 00:44:07][INFO][verifyModel]  Verifying model format...
+[2019/06/04 00:44:07][INFO][verifyModel]  Attempting to deserialize JSON to POJO
+[2019/06/04 00:44:07][INFO][verifyModel]  Successfully deserialized JSON to POJO
+[2019/06/04 00:44:07][INFO][verifyModel]  Model has been validated.
+[2019/06/04 00:44:07][INFO][process]  Recevied status: 200
+[2019/06/04 00:44:08][INFO][process]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses (transactionid, email, sessionid, response, httpstatus) VALUES ('ac6af5ae247166947bb4f047d5bcfe2393e794e21c532348464e159c575d476b1136513bb2f057f91104877415b9d8d5a5fd93c2970ca7c4ee8626a54ef5eca4', 'zexis1@uci.edu', null, '{"resultCode":110,"message":"User registered successfully."}', 200)
+[2019/06/04 00:44:08][INFO][process]  Query Succeed
+[2019/06/04 00:44:09][INFO][apiGateway]  Received request for HTTP response.
+[2019/06/04 00:44:09][INFO][apiGateway]  TransactionID: ac6af5ae247166947bb4f047d5bcfe2393e794e21c532348464e159c575d476b1136513bb2f057f91104877415b9d8d5a5fd93c2970ca7c4ee8626a54ef5eca4
+[2019/06/04 00:44:09][INFO][apiGateway]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT response, httpstatus FROM responses WHERE transactionid = 'ac6af5ae247166947bb4f047d5bcfe2393e794e21c532348464e159c575d476b1136513bb2f057f91104877415b9d8d5a5fd93c2970ca7c4ee8626a54ef5eca4'
+[2019/06/04 00:44:09][INFO][apiGateway]  Return httpstatus: 200
+[2019/06/04 00:44:18][INFO][VerifySession]  Verifying Session with IDM...
+[2019/06/04 00:44:18][INFO][VerifySession]  Recevied status
+[2019/06/04 00:44:18][INFO][VerifySession]  JsonText: {"resultCode":130,"sessionID":"d026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55","message":"Session is active."}
+[2019/06/04 00:44:18][INFO][getGenresRequest]  Search Movie Endpoint URI: /genre
+[2019/06/04 00:44:18][INFO][process]  GET METHOD URI: http://0.0.0.0:6241/api/movies/genre
+[2019/06/04 00:44:18][INFO][process]  email: sunzexi9920@gmail.com
+[2019/06/04 00:44:18][INFO][process]  sessionID: d026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55
+[2019/06/04 00:44:18][INFO][process]  transactionID: 074d7c0271cfbc12e768e9f6b8fb41f7f40a50d550f2600458b04741fc1ca78adb71d0b0e3e355f19ec4cf8f0a65f3f4c18725e4be7b1b1f90bf61f892b95194
+[2019/06/04 00:44:18][INFO][process]  GET Method
+[2019/06/04 00:44:18][INFO][process]  Recevied status: 200
+[2019/06/04 00:44:19][INFO][process]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses (transactionid, email, sessionid, response, httpstatus) VALUES ('074d7c0271cfbc12e768e9f6b8fb41f7f40a50d550f2600458b04741fc1ca78adb71d0b0e3e355f19ec4cf8f0a65f3f4c18725e4be7b1b1f90bf61f892b95194', 'sunzexi9920@gmail.com', 'd026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55', '{"resultCode":219,"genres":[{"id":1,"name":"Action"},{"id":2,"name":"Adult"},{"id":3,"name":"Adventure"},{"id":4,"name":"Animation"},{"id":5,"name":"Biography"},{"id":6,"name":"Comedy"},{"id":7,"name":"Crime"},{"id":8,"name":"Documentary"},{"id":9,"name":"Drama"},{"id":10,"name":"Family"},{"id":11,"name":"Fantasy"},{"id":12,"name":"History"},{"id":13,"name":"Horror"},{"id":14,"name":"Music"},{"id":15,"name":"Musical"},{"id":16,"name":"Mystery"},{"id":17,"name":"Reality-TV"},{"id":18,"name":"Romance"},{"id":19,"name":"Sci-Fi"},{"id":20,"name":"Sport"},{"id":21,"name":"Thriller"},{"id":22,"name":"War"},{"id":23,"name":"Western"},{"id":24,"name":"newGenre"}],"message":"Genres successfully retrieved."}', 200)
+[2019/06/04 00:44:19][INFO][process]  Query Succeed
+[2019/06/04 00:44:20][INFO][apiGateway]  Received request for HTTP response.
+[2019/06/04 00:44:20][INFO][apiGateway]  TransactionID: 074d7c0271cfbc12e768e9f6b8fb41f7f40a50d550f2600458b04741fc1ca78adb71d0b0e3e355f19ec4cf8f0a65f3f4c18725e4be7b1b1f90bf61f892b95194
+[2019/06/04 00:44:20][INFO][apiGateway]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT response, httpstatus FROM responses WHERE transactionid = '074d7c0271cfbc12e768e9f6b8fb41f7f40a50d550f2600458b04741fc1ca78adb71d0b0e3e355f19ec4cf8f0a65f3f4c18725e4be7b1b1f90bf61f892b95194'
+[2019/06/04 00:44:20][INFO][apiGateway]  Return httpstatus: 200
+[2019/06/04 00:44:24][INFO][VerifySession]  Verifying Session with IDM...
+[2019/06/04 00:44:24][INFO][VerifySession]  Recevied status
+[2019/06/04 00:44:24][INFO][VerifySession]  JsonText: {"resultCode":130,"sessionID":"d026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55","message":"Session is active."}
+[2019/06/04 00:44:24][INFO][retrieveOrderRequest]  Recevied request to order place
+[2019/06/04 00:44:24][INFO][verifyModel]  Verifying model format...
+[2019/06/04 00:44:24][INFO][verifyModel]  Attempting to deserialize JSON to POJO
+[2019/06/04 00:44:24][INFO][verifyModel]  Successfully deserialized JSON to POJO
+[2019/06/04 00:44:24][INFO][verifyModel]  Model has been validated.
+[2019/06/04 00:44:28][INFO][process]  Recevied status: 200
+[2019/06/04 00:44:29][INFO][process]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses (transactionid, email, sessionid, response, httpstatus) VALUES ('f79a71e4e2607c0b2647591f710fa6b733adcf92d696ea23c348e29c3ed9c4acf276e8c2b7fb082f5fe63c63645bfc819a0123a80d30f26174b9759f76a3aeda', 'sunzexi9920@gmail.com', 'd026cee6541cfc8a401d6e16a6ca01ff6f1bf005153b528c55a68c7318c87cff3bbfcf508e3fa01db3c0d615943d178d6b4f82708a2884f17371e73e90bc9b55', '{"resultCode":3410,"transactions":[{"transactionId":"2UY286271E622853T","state":"completed","amount":{"total":"38.53","currency":"USD"},"transaction_fee":{"value":"1.42","currency":"USD"},"create_time":"2019-06-04T00:52:18Z","update_time":"2019-06-04T00:52:18Z","items":[{"email":"sunzexi9920@gmail.com","movieId":"tt0468569","quantity":6,"saleDate":"2019-06-03","unit_price":10.926,"discount":0.587686}]},{"transactionId":"6YK23695759760425","state":"completed","amount":{"total":"76.10","currency":"USD"},"transaction_fee":{"value":"2.51","currency":"USD"},"create_time":"2019-06-04T01:00:02Z","update_time":"2019-06-04T01:00:02Z","items":[{"email":"sunzexi9920@gmail.com","movieId":"tt0215244","quantity":6,"saleDate":"2019-06-03","unit_price":17.9116,"discount":0.708071}]},{"transactionId":"3C6861476X846614X","state":"completed","amount":{"total":"38.05","currency":"USD"},"transaction_fee":{"value":"1.40","currency":"USD"},"create_time":"2019-06-04T01:31:00Z","update_time":"2019-06-04T01:31:00Z","items":[{"email":"sunzexi9920@gmail.com","movieId":"tt0215244","quantity":3,"saleDate":"2019-06-03","unit_price":17.9116,"discount":0.708071}]},{"transactionId":"6NM80260VD778545E","state":"completed","amount":{"total":"38.05","currency":"USD"},"transaction_fee":{"value":"1.40","currency":"USD"},"create_time":"2019-06-04T01:34:16Z","update_time":"2019-06-04T01:34:16Z","items":[{"email":"sunzexi9920@gmail.com","movieId":"tt0215244","quantity":3,"saleDate":"2019-06-03","unit_price":17.9116,"discount":0.708071}]},{"transactionId":"24N9043630504290N","state":"completed","amount":{"total":"38.05","currency":"USD"},"transaction_fee":{"value":"1.40","currency":"USD"},"create_time":"2019-06-04T01:39:03Z","update_time":"2019-06-04T01:39:03Z","items":[{"email":"sunzexi9920@gmail.com","movieId":"tt0215244","quantity":3,"saleDate":"2019-06-03","unit_price":17.9116,"discount":0.708071}]},{"transactionId":"66D94758BR9356848","state":"completed","amount":{"total":"31.38","currency":"USD"},"transaction_fee":{"value":"1.21","currency":"USD"},"create_time":"2019-06-04T07:42:44Z","update_time":"2019-06-04T07:42:44Z","items":[{"email":"sunzexi9920@gmail.com","movieId":"tt0290233","quantity":3,"saleDate":"2019-06-04","unit_price":15.7497,"discount":0.664052}]}],"message":"Orders retrieved successfully."}', 200)
+[2019/06/04 00:44:29][INFO][process]  Query Succeed
+[2019/06/04 00:44:30][INFO][apiGateway]  Received request for HTTP response.
+[2019/06/04 00:44:30][INFO][apiGateway]  TransactionID: f79a71e4e2607c0b2647591f710fa6b733adcf92d696ea23c348e29c3ed9c4acf276e8c2b7fb082f5fe63c63645bfc819a0123a80d30f26174b9759f76a3aeda
+[2019/06/04 00:44:30][INFO][apiGateway]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT response, httpstatus FROM responses WHERE transactionid = 'f79a71e4e2607c0b2647591f710fa6b733adcf92d696ea23c348e29c3ed9c4acf276e8c2b7fb082f5fe63c63645bfc819a0123a80d30f26174b9759f76a3aeda'
+[2019/06/04 00:44:30][INFO][apiGateway]  Return httpstatus: 200
