@@ -1,0 +1,9 @@
+serviceConfig:
+  scheme: http://
+  hostName: 127.0.0.1
+  port: 8888
+  path: /
+
+loggerConfig:
+  outputDir: ./logs/
+  outputFile: idm.log
