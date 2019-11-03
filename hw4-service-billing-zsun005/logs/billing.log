@@ -1,0 +1,96 @@
+[2019/06/04 00:39:09][CONFIG][initLogger]  Logging initialized.
+[2019/06/04 00:39:09][CONFIG][initService]  Starting service...
+[2019/06/04 00:39:09][CONFIG][currentConfigs]  Scheme: http://
+[2019/06/04 00:39:09][CONFIG][currentConfigs]  Hostname: 0.0.0.0
+[2019/06/04 00:39:09][CONFIG][currentConfigs]  Port: 6543
+[2019/06/04 00:39:09][CONFIG][currentConfigs]  Path: /api/billing
+[2019/06/04 00:39:09][CONFIG][currentConfigs]  Logger output directory: ./logs/
+[2019/06/04 00:39:09][CONFIG][currentConfigs]  Logger output file: billing.log
+[2019/06/04 00:39:09][CONFIG][currentConfigs]  Database hostname: adrian-monk-v10.ics.uci.edu
+[2019/06/04 00:39:09][CONFIG][currentConfigs]  Database port: 3306
+[2019/06/04 00:39:09][CONFIG][currentConfigs]  Database username: cs122b_db134
+[2019/06/04 00:39:09][CONFIG][currentConfigs]  Database password provided? true
+[2019/06/04 00:39:09][CONFIG][currentConfigs]  Database name: cs122b_db134
+[2019/06/04 00:39:09][CONFIG][currentConfigs]  Database driver: com.mysql.cj.jdbc.Driver
+[2019/06/04 00:39:09][CONFIG][currentConfigs]  Database connection settings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/06/04 00:39:09][CONFIG][connectToDatabase]  Connecting to database...
+[2019/06/04 00:39:09][CONFIG][connectToDatabase]  Database URL: jdbc:mysql://adrian-monk-v10.ics.uci.edu:3306/cs122b_db134?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/06/04 00:39:10][CONFIG][connectToDatabase]  Connected to database: jdbc:mysql://adrian-monk-v10.ics.uci.edu:3306/cs122b_db134?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/06/04 00:39:10][CONFIG][initHTTPServer]  Initializing HTTP server...
+[2019/06/04 00:39:10][CONFIG][initHTTPServer]  Building URI from configs...
+[2019/06/04 00:39:10][CONFIG][initHTTPServer]  Final URI: http://0.0.0.0:6543/api/billing
+[2019/06/04 00:39:10][CONFIG][initHTTPServer]  Set Jersey resources.
+[2019/06/04 00:39:10][CONFIG][initHTTPServer]  Set Jackson as serializer.
+[2019/06/04 00:39:10][CONFIG][initHTTPServer]  Starting HTTP server...
+[2019/06/04 00:39:11][CONFIG][initHTTPServer]  HTTP server started.
+[2019/06/04 00:39:11][CONFIG][initService]  Service initialized.
+[2019/06/04 00:41:36][INFO][insertAPI]  Get Cart Insert Request...
+[2019/06/04 00:41:36][INFO][insertAPI]  {"email":"sunzexi9920@gmail.com","movieId":"tt0290233","quantity":3}
+[2019/06/04 00:41:36][INFO][insertAPI]  Get emailsunzexi9920@gmail.com
+[2019/06/04 00:41:36][INFO][insertAPI]  GEt movieIdtt0290233
+[2019/06/04 00:41:36][INFO][insertAPI]  GET quantity3
+[2019/06/04 00:41:36][INFO][findDuplicateRecordInCarts]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT COUNT(*) AS num FROM carts WHERE email = 'sunzexi9920@gmail.com' AND movieId = 'tt0290233' 
+[2019/06/04 00:41:36][INFO][insertIntoCarts]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO carts (email, movieId, quantity) VALUES ('sunzexi9920@gmail.com', 'tt0290233', 3)
+[2019/06/04 00:41:36][INFO][insertIntoCarts]  Succeed Insert New Items
+[2019/06/04 00:41:44][INFO][checkCustomerExist]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT COUNT(*) AS num FROM customers WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/04 00:41:44][INFO][placeOrder]  Try Querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM carts WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/04 00:41:44][INFO][calculateTotal]  Get Total Charge: 31.37586
+[2019/06/04 00:41:46][INFO][insertIntoSales_Transcations]  Try Querycom.mysql.cj.jdbc.ClientPreparedStatement: CALL insert_sales_transactions('sunzexi9920@gmail.com', 'tt0290233', 3, '2019-06-04', 'EC-0HS89666NT556793Y')
+[2019/06/04 00:41:47][INFO][findDuplicateRecordInCarts]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT COUNT(*) AS num FROM carts WHERE email = 'sunzexi9920@gmail.com' AND movieId = 'tt0290233' 
+[2019/06/04 00:41:47][INFO][deleteShoppingCart]  Query: com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM carts WHERE email = 'sunzexi9920@gmail.com' AND movieId = 'tt0290233'
+[2019/06/04 00:41:47][INFO][deleteShoppingCart]  Query Succeed
+[2019/06/04 00:41:47][INFO][insertIntoSales_Transcations]  Query Succeed
+[2019/06/04 00:42:03][INFO][checkCustomerExist]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT COUNT(*) AS num FROM customers WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/04 00:42:03][INFO][placeOrder]  Try Querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM carts WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/04 00:42:05][INFO][checkCustomerExist]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT COUNT(*) AS num FROM customers WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/04 00:42:05][INFO][placeOrder]  Try Querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM carts WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/04 00:42:13][INFO][insertAPI]  Get Cart Insert Request...
+[2019/06/04 00:42:13][INFO][insertAPI]  {"email":"sunzexi9920@gmail.com","movieId":"tt0290233","quantity":3}
+[2019/06/04 00:42:13][INFO][insertAPI]  Get emailsunzexi9920@gmail.com
+[2019/06/04 00:42:13][INFO][insertAPI]  GEt movieIdtt0290233
+[2019/06/04 00:42:13][INFO][insertAPI]  GET quantity3
+[2019/06/04 00:42:13][INFO][findDuplicateRecordInCarts]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT COUNT(*) AS num FROM carts WHERE email = 'sunzexi9920@gmail.com' AND movieId = 'tt0290233' 
+[2019/06/04 00:42:13][INFO][insertIntoCarts]  Trying Query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO carts (email, movieId, quantity) VALUES ('sunzexi9920@gmail.com', 'tt0290233', 3)
+[2019/06/04 00:42:13][INFO][insertIntoCarts]  Succeed Insert New Items
+[2019/06/04 00:42:17][INFO][checkCustomerExist]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT COUNT(*) AS num FROM customers WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/04 00:42:17][INFO][placeOrder]  Try Querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM carts WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/04 00:42:18][INFO][calculateTotal]  Get Total Charge: 31.37586
+[2019/06/04 00:42:18][INFO][insertIntoSales_Transcations]  Try Querycom.mysql.cj.jdbc.ClientPreparedStatement: CALL insert_sales_transactions('sunzexi9920@gmail.com', 'tt0290233', 3, '2019-06-04', 'EC-2TY94916HE3549452')
+[2019/06/04 00:42:19][INFO][findDuplicateRecordInCarts]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT COUNT(*) AS num FROM carts WHERE email = 'sunzexi9920@gmail.com' AND movieId = 'tt0290233' 
+[2019/06/04 00:42:19][INFO][deleteShoppingCart]  Query: com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM carts WHERE email = 'sunzexi9920@gmail.com' AND movieId = 'tt0290233'
+[2019/06/04 00:42:19][INFO][deleteShoppingCart]  Query Succeed
+[2019/06/04 00:42:19][INFO][insertIntoSales_Transcations]  Query Succeed
+[2019/06/04 00:42:44][INFO][completeOrder]  Get paymentID: PAYID-LT3CBWQ84S22802H80043707
+[2019/06/04 00:42:44][INFO][completeOrder]  Get token: EC-2TY94916HE3549452
+[2019/06/04 00:42:44][INFO][completeOrder]  Get PayerID 6WZ7RXA566Y88
+[2019/06/04 00:42:44][INFO][completeOrder]  Get request completeOrder
+[2019/06/04 00:42:44][INFO][findTransaction]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT COUNT(*) AS num FROM transactions WHERE token = 'EC-2TY94916HE3549452'
+[2019/06/04 00:42:45][INFO][updateTransactionId]  Try Query com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE transactions SET transactionId = '66D94758BR9356848' WHERE token = 'EC-2TY94916HE3549452'
+[2019/06/04 00:42:45][INFO][updateTransactionId]  Succeed
+[2019/06/04 00:42:52][INFO][checkCustomerExist]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT COUNT(*) AS num FROM customers WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/04 00:42:52][INFO][getTransactionIDs]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT transactionId FROM sales LEFT JOIN transactions ON id = sId WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/04 00:42:52][INFO][retrieveOrder]  Try Querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sales LEFT JOIN transactions ON sales.id = transactions.sId LEFT JOIN movie_prices ON sales.movieId = movie_prices.movieId WHERE email = 'sunzexi9920@gmail.com' AND transactionId = '2UY286271E622853T'
+[2019/06/04 00:42:52][INFO][retrieveOrder]  Try Querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sales LEFT JOIN transactions ON sales.id = transactions.sId LEFT JOIN movie_prices ON sales.movieId = movie_prices.movieId WHERE email = 'sunzexi9920@gmail.com' AND transactionId = '6YK23695759760425'
+[2019/06/04 00:42:53][INFO][retrieveOrder]  Try Querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sales LEFT JOIN transactions ON sales.id = transactions.sId LEFT JOIN movie_prices ON sales.movieId = movie_prices.movieId WHERE email = 'sunzexi9920@gmail.com' AND transactionId = '0'
+[2019/06/04 00:42:54][INFO][retrieveOrder]  Try Querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sales LEFT JOIN transactions ON sales.id = transactions.sId LEFT JOIN movie_prices ON sales.movieId = movie_prices.movieId WHERE email = 'sunzexi9920@gmail.com' AND transactionId = '3C6861476X846614X'
+[2019/06/04 00:42:54][INFO][retrieveOrder]  Try Querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sales LEFT JOIN transactions ON sales.id = transactions.sId LEFT JOIN movie_prices ON sales.movieId = movie_prices.movieId WHERE email = 'sunzexi9920@gmail.com' AND transactionId = '6NM80260VD778545E'
+[2019/06/04 00:42:55][INFO][retrieveOrder]  Try Querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sales LEFT JOIN transactions ON sales.id = transactions.sId LEFT JOIN movie_prices ON sales.movieId = movie_prices.movieId WHERE email = 'sunzexi9920@gmail.com' AND transactionId = '24N9043630504290N'
+[2019/06/04 00:42:57][INFO][retrieveOrder]  Try Querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sales LEFT JOIN transactions ON sales.id = transactions.sId LEFT JOIN movie_prices ON sales.movieId = movie_prices.movieId WHERE email = 'sunzexi9920@gmail.com' AND transactionId = '66D94758BR9356848'
+[2019/06/04 00:43:43][INFO][checkCustomerExist]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT COUNT(*) AS num FROM customers WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/04 00:43:43][INFO][getTransactionIDs]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT transactionId FROM sales LEFT JOIN transactions ON id = sId WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/04 00:43:43][INFO][retrieveOrder]  Try Querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sales LEFT JOIN transactions ON sales.id = transactions.sId LEFT JOIN movie_prices ON sales.movieId = movie_prices.movieId WHERE email = 'sunzexi9920@gmail.com' AND transactionId = '2UY286271E622853T'
+[2019/06/04 00:43:44][INFO][retrieveOrder]  Try Querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sales LEFT JOIN transactions ON sales.id = transactions.sId LEFT JOIN movie_prices ON sales.movieId = movie_prices.movieId WHERE email = 'sunzexi9920@gmail.com' AND transactionId = '6YK23695759760425'
+[2019/06/04 00:43:45][INFO][retrieveOrder]  Try Querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sales LEFT JOIN transactions ON sales.id = transactions.sId LEFT JOIN movie_prices ON sales.movieId = movie_prices.movieId WHERE email = 'sunzexi9920@gmail.com' AND transactionId = '0'
+[2019/06/04 00:43:45][INFO][retrieveOrder]  Try Querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sales LEFT JOIN transactions ON sales.id = transactions.sId LEFT JOIN movie_prices ON sales.movieId = movie_prices.movieId WHERE email = 'sunzexi9920@gmail.com' AND transactionId = '3C6861476X846614X'
+[2019/06/04 00:43:46][INFO][retrieveOrder]  Try Querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sales LEFT JOIN transactions ON sales.id = transactions.sId LEFT JOIN movie_prices ON sales.movieId = movie_prices.movieId WHERE email = 'sunzexi9920@gmail.com' AND transactionId = '6NM80260VD778545E'
+[2019/06/04 00:43:47][INFO][retrieveOrder]  Try Querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sales LEFT JOIN transactions ON sales.id = transactions.sId LEFT JOIN movie_prices ON sales.movieId = movie_prices.movieId WHERE email = 'sunzexi9920@gmail.com' AND transactionId = '24N9043630504290N'
+[2019/06/04 00:43:47][INFO][retrieveOrder]  Try Querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sales LEFT JOIN transactions ON sales.id = transactions.sId LEFT JOIN movie_prices ON sales.movieId = movie_prices.movieId WHERE email = 'sunzexi9920@gmail.com' AND transactionId = '66D94758BR9356848'
+[2019/06/04 00:44:24][INFO][checkCustomerExist]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT COUNT(*) AS num FROM customers WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/04 00:44:24][INFO][getTransactionIDs]  Try Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT transactionId FROM sales LEFT JOIN transactions ON id = sId WHERE email = 'sunzexi9920@gmail.com'
+[2019/06/04 00:44:24][INFO][retrieveOrder]  Try Querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sales LEFT JOIN transactions ON sales.id = transactions.sId LEFT JOIN movie_prices ON sales.movieId = movie_prices.movieId WHERE email = 'sunzexi9920@gmail.com' AND transactionId = '2UY286271E622853T'
+[2019/06/04 00:44:25][INFO][retrieveOrder]  Try Querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sales LEFT JOIN transactions ON sales.id = transactions.sId LEFT JOIN movie_prices ON sales.movieId = movie_prices.movieId WHERE email = 'sunzexi9920@gmail.com' AND transactionId = '6YK23695759760425'
+[2019/06/04 00:44:25][INFO][retrieveOrder]  Try Querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sales LEFT JOIN transactions ON sales.id = transactions.sId LEFT JOIN movie_prices ON sales.movieId = movie_prices.movieId WHERE email = 'sunzexi9920@gmail.com' AND transactionId = '0'
+[2019/06/04 00:44:26][INFO][retrieveOrder]  Try Querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sales LEFT JOIN transactions ON sales.id = transactions.sId LEFT JOIN movie_prices ON sales.movieId = movie_prices.movieId WHERE email = 'sunzexi9920@gmail.com' AND transactionId = '3C6861476X846614X'
+[2019/06/04 00:44:27][INFO][retrieveOrder]  Try Querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sales LEFT JOIN transactions ON sales.id = transactions.sId LEFT JOIN movie_prices ON sales.movieId = movie_prices.movieId WHERE email = 'sunzexi9920@gmail.com' AND transactionId = '6NM80260VD778545E'
+[2019/06/04 00:44:27][INFO][retrieveOrder]  Try Querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sales LEFT JOIN transactions ON sales.id = transactions.sId LEFT JOIN movie_prices ON sales.movieId = movie_prices.movieId WHERE email = 'sunzexi9920@gmail.com' AND transactionId = '24N9043630504290N'
+[2019/06/04 00:44:28][INFO][retrieveOrder]  Try Querycom.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sales LEFT JOIN transactions ON sales.id = transactions.sId LEFT JOIN movie_prices ON sales.movieId = movie_prices.movieId WHERE email = 'sunzexi9920@gmail.com' AND transactionId = '66D94758BR9356848'
